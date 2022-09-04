@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/Passport.jpg">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Asum Victor || Software developer</title>
 </head>
 <body>
        <!--Navigation Bar-->
-    <nav class="relative container-full mx-auto px-6 ">
-        <div class="flex items-center justify-around font-bold">
+    <nav class="relative container mx-auto px-6">
+        <div class="flex items-center justify-between font-bold">
            <!--My logo-->
          <div class="pt-2">
              <img src="images/logo.png" alt="My Logo" srcset="images/logo.png">
@@ -19,18 +20,36 @@
          <!--Menu LInks-->
          <div class="hidden md:flex space-x-6">
             <a href="#" class="hover:text-darkGrayishBlue">Home</a>
-            <a href="#" class="hover:text-darkGrayishBlue">My works</a>
+            <a href="#" class="hover:text-darkGrayishBlue">Projects</a>
             <a href="#" class="hover:text-darkGrayishBlue">Skills</a>
             <a href="#" class="hover:text-darkGrayishBlue">About me</a>
-            <a href="#" class="hover:text-darkGrayishBlue">Contact me</a>
+            <a href="#" class="hover:text-darkGrayishBlue">Contact</a>
             <a href="#" class="hover:text-darkGrayishBlue">Theme</a>
          </div>
-         <a href="#" class="p-3 px-6 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight">
+         <a href="#" class="hidden p-3 px-6 text-white bg-brightRed rounded-full baseline 
+         md:block hover:bg-brightRedLight">
             Hire Me
          </a>
+        
+         <!--Menu Toggler-->
+          <button id="menu-toggler" class="block hamburger md:hidden focus:outline-none">
+            Menu
+          </button>
+        </div>  
+          <!-- Mobile Menu-->
+        <div class="md:hidden bg-veryDarkblue">
+          <div id="menu" class="absolute flex-col items-center self-end flex py-8 spacey-6 
+          font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
+          <a href="#" class="hover:text-darkGrayishBlue">Home</a>
+          <a href="#" class="hover:text-darkGrayishBlue">Projects</a>
+          <a href="#" class="hover:text-darkGrayishBlue">Skills</a>
+          <a href="#" class="hover:text-darkGrayishBlue">About me</a>
+          <a href="#" class="hover:text-darkGrayishBlue">Contact</a>
+          <a href="#" class="hover:text-darkGrayishBlue">Theme</a>
+          </div>
+
 
         </div>
-
     </nav>
 </body>
 </html>
