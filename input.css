@@ -46,12 +46,6 @@ nav{
     transform: translateY(0.5cm) rotateZ(-45deg);
 }
 
-
-.showMenu{
-    display: flex;
-    transition: display 5s;
-}
-
 a{
     font-size: 18px;
 }
