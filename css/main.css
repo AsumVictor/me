@@ -712,7 +712,8 @@ nav{
 }
 
 a{
-  font-size: 18px;
+  font-size: 19px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .hover\:bg-brightRedLight:hover {
@@ -753,3 +754,4 @@ a{
     display: none;
   }
 }
+
