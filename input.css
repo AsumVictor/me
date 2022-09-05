@@ -2,9 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+
+header{
+    position: sticky;
+    top: 0px;
+    z-index: 99;
+}
+
 nav{
-    border: none;
-    border-bottom:2px solid;
+    background-image: linear-gradient(30deg,rgba(255,255,255,0.7),rgba(255,255,255,0.3),rgba(255,255,255,0.6));
+    backdrop-filter: blur(15px);;
 }
 
 .hamburger {
@@ -51,3 +58,70 @@ a{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+#section1{
+    position: relative;
+    top: -2cm;
+    background-color: ;
+}
+
+.jobTitle{
+    height: 1.5cm;
+    width: 7cm;
+    transform: translateY(-1cm);
+}
+
+.wordcontainer{
+    height: 1.5cm;
+    width: 5cm;
+}
+
+.words{
+    width: 100%;
+    height: 4.5cm;
+    transform: translateY(0cm);
+    animation: moveup 10.5s infinite steps(3);
+}
+@keyframes moveup {
+    100%{transform: translateY(-4.5cm);}
+}
+
+.text{
+    height: 1.5cm;
+    width: 100%;
+    padding-left: 10px;
+}
+
+.write{
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    transform: translateX(0%);
+    animation: moveleft 3.5s infinite steps(10);
+}
+.write::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    border: 5px solid hsl(228,39%,23%);
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    opacity: 0;
+    animation: blink .3s infinite;
+}
+
+@keyframes moveleft {
+    70%{transform: translateX(110%);}
+}
+@keyframes blink{
+    100%{opacity: 1;}
+}
+
+#section1 p{
+    margin-top: 0cm;
+}
+
+#section1 button{
+    width: 4cm;
+}
