@@ -118,3 +118,10 @@ a{
     100%{opacity: 1;}
 }
 
+#section1 p{
+    margin-top: 0cm;
+}
+
+#section1 button{
+    width: 4cm;
+}
