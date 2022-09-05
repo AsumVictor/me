@@ -656,10 +656,6 @@ video {
   justify-content: space-between;
 }
 
-.justify-around {
-  justify-content: space-around;
-}
-
 .space-x-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1.5rem * var(--tw-space-x-reverse));
@@ -701,11 +697,6 @@ video {
 .bg-brightRed {
   --tw-bg-opacity: 1;
   background-color: hsl(12 88% 59% / var(--tw-bg-opacity));
-}
-
-.bg-veryDarkblue {
-  --tw-bg-opacity: 1;
-  background-color: hsl(223 12% 13% / var(--tw-bg-opacity));
 }
 
 .bg-white {
