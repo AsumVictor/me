@@ -58,10 +58,9 @@ a{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#section1{
+#section1,#section2{
     position: relative;
     top: -2cm;
-    background-color: ;
 }
 
 .jobTitle{
@@ -124,4 +123,9 @@ a{
 
 #section1 button{
     width: 4cm;
+}
+
+#section2{
+    position: relative;
+    top: -3cm;
 }
