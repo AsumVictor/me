@@ -57,7 +57,7 @@
         </div>
     </nav>
 </header>
-
+  <!--Section one with animation-->
   <section id="section1" class="pt-12">
       <div class="container flex flex-col md:flex-row items-center md:justify-center mx-auto
                    mt-20 space-y-0 md:space-y-0 px-6">
@@ -103,7 +103,58 @@
 
         </div>            
   </section>
+<!--Sections that contains projects-->
+  <section id="projectSections">
+      <div class=" heading flex flex-row item-center mt-12  justify-center md:mt-0">
+        <h2 class="text-center text-brightRed font-bold text-1xl p-3 md:text-2xl bg-white">My Works</h2>
+        <div class="line absolute bg-brightRed rounded-full"></div>
+      </div>
+      <!--Pojects-->
+      <div class="projectsContainer flex-col flex items-center justify-center mx-2">
+        <!--for one project-->
+          <div class="relative projectWrap bg-darkGrayishBlue flex flex-col md:flex-row md:p-7
+             mt-8 md:space-x-7 rounded-2xl" style="width:90%;">
+                     <!--Project Screenshot-->
+                     <div class="projectImagebox md:w-1/2 bg-gray-100 flex items-center p-4">
+                        <img src="screenshots/screenshot.png" alt="screenshots/screenshot.png" srcset="screenshots/screenshot.png">
+                    </div>
 
+                     <div class="projectInfo md:w-1/2 bg-white p-4">
+                       <h3 class="text-2xl text-center uppercase font-bold"> student enrollment</h3>
+                       <div class="flex flex-row flex-start">
+                         <p class="px-3 font-bold"><span class=" text-darkBlue">Students </span> * 
+                          <span class="capitalize  text-darkGrayishBlue">database</span> * 
+                          <span class="text-brightRedLight">2022</span> </p>
+                       </div>
+                       <div class="projectdetails">
+                         <p class="text-1xl font-bold p-3 text-darkGrayishBlue">
+                          This is a To-do List app, where you can add your tasks to do, 
+                          and It will be saved so you will 
+                          have access to your tasks anytime you come back to the app.
+                          have access to your tasks anytime you come back to the app.
+                          This is a To-do List app, where you can add your tasks to do, 
+                          and It will be saved so you will 
+                          have access to your tasks anytime you come back to the app.
+                          have access to your tasks anytime you come back to the app.
+                         </p>
+                       </div>
+                       <div class="tagsLanguage flex flex-row justify-start px-4 space-x-2 mt-3">
+                            <div class="lang p-2 rounded-xl bg-gray-200 text-darkBlue font-bold"><p>HTML</p></div>
+                            <div class="lang p-2 rounded-xl bg-gray-200 text-darkBlue font-bold"><p>CSS</p></div>
+                            <div class="lang p-2 rounded-xl bg-gray-200 text-darkBlue font-bold"><p>Javascript</p></div>
+                       </div>
+                       <div class="liveAndCode flex flex-row justify-start space-x-5 mt-3 p-4">
+                         <button class="p-2 font-bold text-white bg-brightRed rounded-2xl text-center 
+                         md:block hover:bg-brightRedLight md:self-start"><a href="#">View live</a></button>
+                         <button class="p-2 font-bold text-white bg-brightRed rounded-2xl text-center 
+                         md:block hover:bg-brightRedLight md:self-start"><a href="#">Source Code <i class="fa fa github"></i></a></button>
+                       </div>
+                     </div>
+          </div>
+
+      </div>
+
+  </section>
 
 
       <script src="script.js"></script>

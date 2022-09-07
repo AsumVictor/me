@@ -58,7 +58,7 @@ a{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#section1,#section2{
+#section1,#projectSections{
     position: relative;
     top: -2cm;
 }
@@ -125,7 +125,11 @@ a{
     width: 4cm;
 }
 
-#section2{
-    position: relative;
-    top: -3cm;
+.heading h2{
+    z-index: 1;
+}
+.line{
+    align-self: center;
+   height: 5px;
+   width: 80%;
 }
