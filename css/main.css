@@ -1007,13 +1007,18 @@ a{
   width: 90%;
 }
 
-svg circle{
+.circle{
   fill: none;
   stroke-width: 1.2rem;
-  stroke: hsl(12,88%,59%);
+  stroke: rgb(248, 203, 190);
+  stroke-dasharray: 510;
   stroke-linecap: round;
-  stroke-dasharray: 450px;
-  stroke-dashoffset: 450px;
+  transform: rotateZ(-90deg);
+  transform-origin: center;
+}
+
+.progress{
+  stroke: hsl(12,88%,59%);
 }
 
 .hover\:bg-brightRedLight:hover {
