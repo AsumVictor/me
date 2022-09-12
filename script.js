@@ -67,28 +67,24 @@ const languages = [
    {
      name:'Javascript',
      logo_src:'Lang_img/javascript.png',
-     short_text:'Currently learning arrays method. Next will be data conversion.',
      logo_alternation_text:'Javascript Logo',
      progress: 24,
    },
    {
     name:'HTML 5',
     logo_src:'Lang_img/html.png',
-    short_text:'I am done with most of the HTML syntax.',
     logo_alternation_text:'JHTML Logo',
     progress: 92,
   },
   {
     name:'CSS 3',
     logo_src:'Lang_img/css.png',
-    short_text:'Most of the CSS elements and syntax have been completed',
     logo_alternation_text:'CSS Logo',
     progress: 87,
   },
   {
     name:'Python',
     logo_src:'Lang_img/python.png',
-    short_text:'Have not started yet I know only data types. hoping to learn M.L & A.I',
     logo_alternation_text:'CSS Logo',
     progress: 5,
   }
@@ -98,21 +94,18 @@ const Frameworks = [
   {
     name:'Bootstrap',
     logo_src:'Lang_img/bootstrap.png',
-    short_text:'I am able to use most of the Boostrap classes.',
     logo_alternation_text:'Boostrap Logo',
     progress: 90,
   },
   {
    name:'Tailwind CSS',
    logo_src:'Lang_img/tailwindcss.png',
-   short_text:'I am able to use most of the Tailwind classes.',
    logo_alternation_text:'Tailwind Logo',
    progress: 92,
  },
  {
    name:'React JS',
    logo_src:'Lang_img/reactjs.png',
-   short_text:'Just started',
    logo_alternation_text:'React Logo',
    progress: 2,
  }
@@ -183,7 +176,7 @@ languages.sort(() => 0.5 - Math.random());
         <img src="${language.logo_src}" alt="${language.logo_alternation_text}" srcset="${language.logo_src}" style="height:2.3cm;width:2.3cm;">
       </div>
       <h4 class="text-2xl font-bold">${language.name}</h4>
-      <p class="text-center px-4 font-serif font-bold mt-2">${language.short_text}</p>
+      
      `
      language_card = document.createElement('div')
      language_card.setAttribute("class",'progressCard mt-5 bg-gray-200 mx-5 flex flex-col items-center pb-4 pt-2 rounded-2xl cursor-pointer')
@@ -205,7 +198,7 @@ languages.sort(() => 0.5 - Math.random());
         <img src="${framework.logo_src}" alt="${framework.logo_alternation_text}" srcset="${framework.logo_src}" style="height:2.3cm;width:2.3cm;">
       </div>
       <h4 class="text-2xl font-bold">${framework.name}</h4>
-      <p class="text-center px-4 font-serif font-bold mt-2">${framework.short_text}</p>
+    
      `
      framework_card = document.createElement('div')
      framework_card.setAttribute("class",'progressCard mt-5 bg-gray-200 mx-5 flex flex-col items-center pb-4 pt-2 rounded-2xl cursor-pointer')
