@@ -139,10 +139,11 @@ a{
 }
 .progressCard{
     width: 6.6cm;
+    transition:  .5s;
 }
 .progressCard:hover{
     transform: scale(1.05);
-    transition:  .3s ease-in;
+    transition:  .5s;
 }
 .svg_box{
     width: 5cm;

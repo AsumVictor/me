@@ -633,6 +633,10 @@ video {
   margin-top: 1.25rem;
 }
 
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
 .block {
   display: block;
 }
@@ -709,6 +713,12 @@ video {
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .self-end {
   align-self: flex-end;
 }
@@ -772,6 +782,10 @@ video {
 
 .pt-4 {
   padding-top: 1rem;
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem;
 }
 
 .text-left {
@@ -996,11 +1010,12 @@ a{
 
 .progressCard{
   width: 6.6cm;
+  transition:  .5s;
 }
 
 .progressCard:hover{
   transform: scale(1.05);
-  transition:  .3s ease-in;
+  transition:  .5s;
 }
 
 .svg_box{
@@ -1122,6 +1137,11 @@ svg{
 
   .md\:self-start {
     align-self: flex-start;
+  }
+
+  .md\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .md\:text-left {
