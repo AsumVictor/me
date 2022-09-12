@@ -19,7 +19,7 @@
        <!--Navigation Bar-->
 <header>
     <nav class="container-full mx-auto px-6">
-        <div class="bg-transparent flex text-dark items-center justify-between font-bold md:justify-around" style="height:2cm;">
+        <div class="bg-transparent nav flex text-dark items-center justify-between font-bold md:justify-around" style="height:2cm;">
            <!--My logo-->
          <div class="pt-2">
              <img src="images/logo.png" alt="My Logo" srcset="images/logo.png">
@@ -27,7 +27,7 @@
          <!--Menu LInks-->
          <div class="hidden md:flex space-x-6">
             <a href="#" class="hover:text-darkGrayishBlue home active_tap">Home</a>
-            <a href="#projectpage" class="hover:text-darkGrayishBlue project ">Projects</a>
+            <a href="#" class="hover:text-darkGrayishBlue project ">Projects</a>
             <a href="#skills" class="hover:text-darkGrayishBlue skill ">Skills</a>
             <a href="#" class="hover:text-darkGrayishBlue about ">About</a>
             <a href="#" class="hover:text-darkGrayishBlue contact ">Contact</a>
@@ -46,19 +46,18 @@
           </button>
         </div>  
           <!-- Mobile Menu-->
-        <div class="md:hidden">
-          <div id="menu" class="menu hidden flex absolute flex-col items-center self-end py-8 spacey-6 
-          font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
-          <a href="#" class="hover:text-darkGrayishBlue">Home</a>
-          <a href="#projectpage" class="hover:text-darkGrayishBlue mt-2">Projects</a>
-          <a href="#skills" class="hover:text-darkGrayishBlue mt-2">Skills</a>
-          <a href="#" class="hover:text-darkGrayishBlue mt-2">About me</a>
-          <a href="#" class="hover:text-darkGrayishBlue mt-2">Contact</a>
-          <a href="#" class="hover:text-darkGrayishBlue mt-2">Theme</a>
+        <div class="md:hidden nav mt-5">
+          <div id="menu" class="nav hidden flex absolute flex-col items-center py-8 spacey-6 
+          font-bold sm:w-auto bg-white left-6 right-6 drop-shadow-md">
+          <a href="#" class="hover:text-darkGrayishBlue home active_tap mob_btn">Home</a>
+          <a href="#" class="hover:text-darkGrayishBlue mt-2 project mob_btn">Projects</a>
+          <a href="#skills" class="hover:text-darkGrayishBlue mt-2 skill mob_btn">Skills</a>
+          <a href="#" class="hover:text-darkGrayishBlue mt-2 about mob_btn">About me</a>
+          <a href="#" class="hover:text-darkGrayishBlue mt-2 contact mob_btn">Contact</a>
+          <a href="#" class="hover:text-darkGrayishBlue mt-2 mob_btn">Theme</a>
           </div>
-
-
         </div>
+        
     </nav>
 </header>
 

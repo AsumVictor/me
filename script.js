@@ -1,11 +1,138 @@
 const menuToggler = document.querySelector(".hamburger");
 const menu = document.querySelector("#menu");
+const home_btns = document.querySelectorAll(".home");
+const project_btns = document.querySelectorAll(".project");
+const skill_btns = document.querySelectorAll(".skill");
+const about_btns = document.querySelectorAll(".about");
+const contact_btns = document.querySelectorAll(".contact");
+const mob_btns = document.querySelectorAll(".mob_btn");
+const home_page = document.querySelector(".homepage");
+const project_page = document.querySelector(".projectpages");
+
 
 function openMenu(){
     menuToggler.classList.toggle("open")
     menu.classList.toggle("hidden")
 };
+
+function show_home_tab(){
+   home_btns.forEach((home_btn)=>{
+    home_btn.classList.add("active_tap");
+   })
+   project_btns.forEach((project_btn)=>{
+    project_btn.classList.remove("active_tap");
+   })
+   skill_btns.forEach((skill_btn)=>{
+    skill_btn.classList.remove("active_tap");
+   })
+   about_btns.forEach((about_btn)=>{
+    about_btn.classList.remove("active_tap");
+   })
+   contact_btns.forEach((contact_btn)=>{
+    contact_btn.classList.remove("active_tap");
+   })
+  home_page.classList.remove("hidden")
+  project_page.classList.add("hidden")
+}
+function show_project_tab(){
+  home_btns.forEach((home_btn)=>{
+   home_btn.classList.remove("active_tap");
+  })
+  project_btns.forEach((project_btn)=>{
+   project_btn.classList.add("active_tap");
+  })
+  skill_btns.forEach((skill_btn)=>{
+   skill_btn.classList.remove("active_tap");
+  })
+  about_btns.forEach((about_btn)=>{
+   about_btn.classList.remove("active_tap");
+  })
+  contact_btns.forEach((contact_btn)=>{
+   contact_btn.classList.remove("active_tap");
+  })
+  home_page.classList.add("hidden")
+  project_page.classList.remove("hidden")
+}
+function close_mob_nav() {
+  menuToggler.classList.remove("open")
+  menu.classList.add("hidden")
+} 
+function show_contact_tab(){
+  home_btns.forEach((home_btn)=>{
+   home_btn.classList.remove("active_tap");
+  })
+  project_btns.forEach((project_btn)=>{
+   project_btn.classList.remove("active_tap");
+  })
+  skill_btns.forEach((skill_btn)=>{
+   skill_btn.classList.remove("active_tap");
+  })
+  about_btns.forEach((about_btn)=>{
+   about_btn.classList.remove("active_tap");
+  })
+  contact_btns.forEach((contact_btn)=>{
+   contact_btn.classList.add("active_tap");
+  })
+
+}
+function show_skill_tab(){
+  home_btns.forEach((home_btn)=>{
+   home_btn.classList.remove("active_tap");
+  })
+  project_btns.forEach((project_btn)=>{
+   project_btn.classList.remove("active_tap");
+  })
+  skill_btns.forEach((skill_btn)=>{
+   skill_btn.classList.add("active_tap");
+  })
+  about_btns.forEach((about_btn)=>{
+   about_btn.classList.remove("active_tap");
+  })
+  contact_btns.forEach((contact_btn)=>{
+   contact_btn.classList.remove("active_tap");
+  })
+
+}
+function show_about_tab(){
+  home_btns.forEach((home_btn)=>{
+   home_btn.classList.remove("active_tap");
+  })
+  project_btns.forEach((project_btn)=>{
+   project_btn.classList.remove("active_tap");
+  })
+  skill_btns.forEach((skill_btn)=>{
+   skill_btn.classList.remove("active_tap");
+  })
+  about_btns.forEach((about_btn)=>{
+   about_btn.classList.add("active_tap");
+  })
+  contact_btns.forEach((contact_btn)=>{
+   contact_btn.classList.remove("active_tap");
+  })
+
+}
+
+
+project_btns.forEach((project_btn)=>{
+  project_btn.addEventListener("click",show_project_tab)
+})
+home_btns.forEach((home_btn)=>{
+  home_btn.addEventListener("click",show_home_tab)
+})
 menuToggler.addEventListener("click",openMenu)
+mob_btns.forEach((mob_btn)=>{
+  mob_btn.addEventListener("click",close_mob_nav)
+})
+
+skill_btns.forEach((skill_btn)=>{
+  skill_btn.addEventListener("click",show_skill_tab)
+})
+contact_btns.forEach((contact_btn)=>{
+  contact_btn.addEventListener("click",show_contact_tab)
+})
+about_btns.forEach((about_btn)=>{
+  about_btn.addEventListener("click",show_about_tab)
+})
 
 //Arrays of Projects
 const Projects = [
