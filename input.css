@@ -137,3 +137,12 @@ a{
 .projectwrapi{
     width: 90%;
 }
+
+svg circle{
+    fill: none;
+    stroke-width: 1.2rem;
+    stroke: hsl(12,88%,59%);
+    stroke-linecap: round;
+    stroke-dasharray: 450px;
+    stroke-dashoffset: 450px;
+}
