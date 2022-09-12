@@ -61,6 +61,24 @@ a{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.active_tap{
+    color: hsl(12,88%,59%); 
+    position: relative;
+   
+}
+.active_tap::after{
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    width: 130%;
+    height: 0.1cm;
+    background-color: hsl(12,88%,59%);
+    left: -10px;
+    display: flex;
+    align-self: center;
+}
+
+
 #section1,#projectSections{
     position: relative;
     top: -2cm;
