@@ -137,3 +137,44 @@ a{
 .projectwrapi{
     width: 90%;
 }
+.progressCard{
+    width: 6.6cm;
+    transition:  .5s;
+}
+.progressCard:hover{
+    transform: scale(1.05);
+    transition:  .5s;
+}
+.svg_box{
+    width: 5cm;
+    height: 5cm;
+}
+
+svg{
+    width: 5cm;
+    height: 5cm;
+}
+
+.circle{
+    fill: none;
+    stroke-width: 1.2rem;
+    stroke: rgb(248, 203, 190);
+    stroke-dasharray: 510;
+    stroke-linecap: round;
+    transform: rotateZ(-90deg);
+    transform-origin: center;
+}
+
+
+.progress{
+    stroke: hsl(12,88%,59%);
+}
+
+.progressCard:hover .progress{
+    animation: levelup 1s forwards;
+}
+
+@keyframes levelup {
+    from {stroke-dashoffset: 510;}
+    to{stroke-dashoffset: var(--level)}
+}
