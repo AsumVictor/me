@@ -63,8 +63,20 @@ const top3Projects = [
     }
 ];
 
+const languages = [
+   {
+     name:'Javascript',
+     logo_src:'Lang_img/javascript.png',
+     short_text:'Currently learning arrays method. Next will be data conversion.',
+     logo_alternation_text:'Javascript Logo',
+     progress: 24,
+   }
+]
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const projectsContainer = document.querySelector('.projectsContainer'); 
+    const language_card_space = document.querySelector('.skillsspace')
     let projectLangs;
     let projectwrap;
   
@@ -109,6 +121,28 @@ document.addEventListener('DOMContentLoaded', () => {
         projectwrap.innerHTML= homeMyworksContent;
         projectsContainer.appendChild(projectwrap)
            });
+
+// Creating Languages card
+    languages.forEach((language)=>{
+     let stroke_dashoffset = Math.round(((100 - language.progress)/100)*510)
+     let language_card;
+
+     let language_card_content = `
+     <div class="svg_box flex justify-center items-center">
+        <svg class="absolute">
+          <circle class="circle" cx="95" cy="95" r="80"></circle>
+          <circle class="circle progress" cx="95" cy="95" r="80" style="stroke-dashoffset: ${stroke_dashoffset};--level:${stroke_dashoffset};"></circle>
+        </svg>
+        <img src="${language.logo_src}" alt="${language.logo_alternation_text}" srcset="${language.logo_src}" style="height:2.3cm;width:2.3cm;">
+      </div>
+      <h4 class="text-2xl font-bold">${language.name}</h4>
+      <p class="text-center px-4 font-serif font-bold mt-2">${language.short_text}</p>
+     `
+     language_card = document.createElement('div')
+     language_card.setAttribute("class",'progressCard mt-5 bg-gray-200 m-2 flex flex-col items-center pb-4 pt-2 rounded-2xl')
+     language_card.innerHTML= language_card_content;
+     language_card_space.appendChild(language_card)
+    })
 
 });
 

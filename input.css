@@ -137,6 +137,22 @@ a{
 .projectwrapi{
     width: 90%;
 }
+.progressCard{
+    width: 6.6cm;
+}
+.progressCard:hover{
+    transform: scale(1.05);
+    transition:  .3s ease-in;
+}
+.svg_box{
+    width: 5cm;
+    height: 5cm;
+}
+
+svg{
+    width: 5cm;
+    height: 5cm;
+}
 
 .circle{
     fill: none;
@@ -151,4 +167,13 @@ a{
 
 .progress{
     stroke: hsl(12,88%,59%);
+}
+
+.progressCard:hover .progress{
+    animation: levelup 1s forwards;
+}
+
+@keyframes levelup {
+    from {stroke-dashoffset: 510;}
+    to{stroke-dashoffset: var(--level)}
 }
