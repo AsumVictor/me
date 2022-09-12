@@ -73,7 +73,8 @@ function show_contact_tab(){
   contact_btns.forEach((contact_btn)=>{
    contact_btn.classList.add("active_tap");
   })
-
+  home_page.classList.remove("hidden")
+  project_page.classList.add("hidden")
 }
 function show_skill_tab(){
   home_btns.forEach((home_btn)=>{
@@ -91,7 +92,8 @@ function show_skill_tab(){
   contact_btns.forEach((contact_btn)=>{
    contact_btn.classList.remove("active_tap");
   })
-
+  home_page.classList.remove("hidden")
+  project_page.classList.add("hidden")
 }
 function show_about_tab(){
   home_btns.forEach((home_btn)=>{
@@ -109,7 +111,8 @@ function show_about_tab(){
   contact_btns.forEach((contact_btn)=>{
    contact_btn.classList.remove("active_tap");
   })
-
+  home_page.classList.remove("hidden")
+  project_page.classList.add("hidden")
 }
 
 
