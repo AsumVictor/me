@@ -13,13 +13,14 @@
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <title>Asum Victor || Software developer</title>
 </head>
 <body>
        <!--Navigation Bar-->
 <header>
-    <nav class="container-full mx-auto px-6">
-        <div class="bg-transparent nav flex text-dark items-center justify-between font-bold md:justify-around" style="height:2cm;">
+    <nav class=" mx-auto">
+        <div class="bg-transparent sm:p-4 w-full nav dark flex text-dark items-center justify-between font-bold md:justify-around" style="height:2cm;">
            <!--My logo-->
          <div class="pt-2">
              <img src="images/logo.png" alt="My Logo" srcset="images/logo.png">
@@ -47,8 +48,8 @@
         </div>  
           <!-- Mobile Menu-->
         <div class="md:hidden mob_nav">
-          <div id="menu" class="mob_menu hidden flex absolute flex-col items-center py-10 spacey-6 
-          font-bold bg-white sm:w-auto left-6 right-6 drop-shadow-lg">
+          <div id="menu" class="mob_menu dark hidden flex absolute flex-col items-center py-10 spacey-6 
+          font-bold sm:w-auto left-6 right-6 drop-shadow-lg">
           <a href="#" class="hover:text-darkGrayishBlue home active_tap mob_btn">Home</a>
           <a href="#" class="hover:text-darkGrayishBlue mt-2 project mob_btn">Projects</a>
           <a href="#skills" class="hover:text-darkGrayishBlue mt-2 skill mob_btn">Skills</a>
@@ -63,10 +64,10 @@
 
 <div class="homepage">  
   <!--Section one with animation-->
-  <section id="section1" class="pt-10">
-      <div class="container flex flex-col md:flex-row items-center md:items-start justify-around  mx-auto
+  <section id="section1" class="pt-10 dark">
+      <div class="container  flex flex-col md:flex-row items-center md:items-start justify-around  mx-auto
                    mt-20 space-y-0 md:space-y-0 px-6">
-        <div class="flex flex-col mb-32 space-y-12 md:w-1/2">
+        <div class="flex flex-col mb-32 space-y-12 bg-red-400 md:w-1/2">
            <h1 class="mt-10 max-w-md text-3xl font-bold text-left md:text-4xl">
              Hi,
            </h1> 
@@ -110,9 +111,9 @@
   </section>
 <!--Sections that contains projects-->
 
-  <section id="projectSections">
+  <section id="projectSections" class="dark">
       <div class=" heading flex flex-row item-center mt-12  justify-center md:mt-0">
-        <h2 class="text-center text-brightRed font-bold text-1xl p-3 md:text-2xl bg-white">My Works</h2>
+        <h2 class="text-center text-brightRed font-bold text-1xl p-3 md:text-2xl bg-white">&lt;My Works&gt;</h2>
         <div class="line absolute bg-brightRed rounded-full"></div>
       </div>
       <!--Pojects-->
@@ -127,7 +128,7 @@
       </div>
   </section>
 
-  <section id="skillsection">
+  <section id="skillsection" class="dark">
     <div id="skills" class=" heading flex flex-row item-center -mt-5  justify-center md:-mt-2">
       <h2 class="text-center text-brightRed font-bold text-1xl p-3 md:text-2xl bg-white">My Skills</h2>
       <div class="line absolute bg-brightRed rounded-full"></div>
@@ -156,7 +157,7 @@
 <div class="projectpages hidden">  
 <!--Sections that contains projects-->
 
-  <section id="projectpage">
+  <section id="projectpage" class="dark">
       <div class=" heading flex flex-row mt-5 pt-5 item-center justify-center">
         <h2 class="text-center text-brightRed font-bold text-1xl p-3 text-3xl bg-white">Projects</h2>
         <div class="line absolute bg-brightRed rounded-full"></div>

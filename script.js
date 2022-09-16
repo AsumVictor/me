@@ -13,11 +13,19 @@ const sections = document.querySelectorAll('section');
 function openMenu(){
     menuToggler.classList.toggle("open")
     menu.classList.toggle("hidden")
-    sections.forEach((section)=>{
-    section.classList.toggle('blur')
-    })
+   
 };
-
+function checksection(){
+  if (menu.classList.contains("hidden")) {
+    sections.forEach((section)=>{
+      section.classList.remove('blur')
+      })
+  } else {
+    sections.forEach((section)=>{
+      section.classList.add('blur')
+      })
+  }
+}
 function show_home_tab(){
    home_btns.forEach((home_btn)=>{
     home_btn.classList.add("active_tap");
@@ -118,6 +126,7 @@ function show_about_tab(){
   project_page.classList.add("hidden")
 }
 
+setInterval(checksection,100)
 
 project_btns.forEach((project_btn)=>{
   project_btn.addEventListener("click",show_project_tab)
@@ -337,9 +346,9 @@ document.addEventListener('DOMContentLoaded', () => {
                   </div>
                   <div class="liveAndCode flex flex-row justify-start space-x-5 mt-3 p-4">
                     <button class="p-2 font-bold text-white bg-brightRed rounded-2xl text-center 
-                    md:block hover:bg-brightRedLight md:self-start"><a href="${top3Project.liveViewLink}">View live</a></button>
+                    md:block hover:bg-brightRedLight md:self-start"><a href="${top3Project.liveViewLink}">View live <i class="fa fa-external-link-square"></i></a></button>
                     <button class="p-2 font-bold text-white bg-brightRed rounded-2xl text-center 
-                    md:block hover:bg-brightRedLight md:self-start"><a href="${top3Project.sourceCodeLink}">Source Code <i class="fa fa github"></i></a></button>
+                    md:block hover:bg-brightRedLight md:self-start"><a href="${top3Project.sourceCodeLink}">Source Code <i class="fa fa-github"></i></a></button>
                   </div>
                 </div>
      
@@ -361,7 +370,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         MyworksContent = `
                 <!--Project Screenshot-->
-                <div class="projectImagebox md:w-1/2 bg-gray-100 flex items-center p-4 ">
+                <div class="projectImagebox md:w-1/2 bg-gray-100 flex items-center p-4">
                    <img src="${Project.imageLink}" alt="${Project.imageAltText}" srcset="${Project.imageLink}">
                </div>
 
@@ -380,9 +389,9 @@ document.addEventListener('DOMContentLoaded', () => {
                   </div>
                   <div class="liveAndCode flex flex-row justify-start space-x-5 mt-3 p-4">
                     <button class="p-2 font-bold text-white bg-brightRed rounded-2xl text-center 
-                    md:block hover:bg-brightRedLight md:self-start"><a href="${Project.liveViewLink}">View live</a></button>
+                    md:block hover:bg-brightRedLight md:self-start"><a href="${Project.liveViewLink}">View live <i class="fa fa-external-link-square"></i></a></button>
                     <button class="p-2 font-bold text-white bg-brightRed rounded-2xl text-center 
-                    md:block hover:bg-brightRedLight md:self-start"><a href="${Project.sourceCodeLink}">Source Code <i class="fa fa github"></i></a></button>
+                    md:block hover:bg-brightRedLight md:self-start"><a href="${Project.sourceCodeLink}">Source Code <i class="fa fa-github"></i></a></button>
                   </div>
                 </div>
      

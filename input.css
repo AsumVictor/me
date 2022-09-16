@@ -4,7 +4,13 @@
 
 *{
     user-select: none;
-    transition: all .3s;
+}
+
+body{
+    background-color: #0a101e;
+    background-image: url('images/backgroungimg2.png');
+    background-attachment: fixed;
+    background-size: contain;
 }
 
 header{
@@ -17,7 +23,13 @@ header{
     background-image: linear-gradient(30deg,rgba(255,255,255,0.9),rgba(255,255,255,0.7),rgba(255,255,255,0.6));
     backdrop-filter: blur(46px);
     webkit-backdrop-filter: blur(46px);
+    width: 100%;
 }
+.nav.dark{
+    color: rgb(231, 231, 231);
+    background-image: linear-gradient(30deg,rgba(10,16,30,0.9),rgba(10,16,30,0.7),rgba(10,16,30,0.6));
+}
+
 
 .hamburger {
     cursor: pointer;
@@ -37,6 +49,12 @@ header{
     left: 0px;
     background-color: #000;
     transition: .3s;
+}
+
+.nav.dark .hamburger-top,
+.nav.dark .hamburger-middle,
+.nav.dark .hamburger-bottom {
+    background-color: white;
 }
 
 .hamburger-middle{
@@ -62,7 +80,16 @@ a{
     font-size: 19px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+.mob_menu{
+    color: black;
+    background-image: linear-gradient(30deg,rgba(255,255,255,0.9),rgba(255,255,255,0.7),rgba(255,255,255,0.6));
+    backdrop-filter: blur(50px);
+}
+.mob_menu.dark{
+    color: rgb(231, 231, 231);
+    background-image: linear-gradient(30deg,rgba(10,16,30,0.9),rgba(10,16,30,0.7),rgba(10,16,30,0.6));
+    backdrop-filter: blur(50px);
+}
 .active_tap{
     color: hsl(12,88%,59%); 
     position: relative;
@@ -84,6 +111,16 @@ a{
 #section1,#projectSections{
     position: relative;
     top: -2cm;
+}
+#section1.dark,#projectSections.dark,#skillsection.dark,#projectpage.dark{
+    background-color:#0a101e;
+}
+#section1.dark .container{
+    background-color:#0a101e;
+    color: white;
+}
+#section1.dark .flex{
+    background-color:#0a101e;
 }
 
 .jobTitle{
@@ -132,6 +169,12 @@ a{
     opacity: 0;
     animation: blink .3s infinite;
 }
+#section1.dark .write::after{
+    border-left: 5px solid rgb(242, 242, 243);
+    border-right: none;
+    border-bottom: none;
+    border-top: none;
+}
 
 @keyframes moveleft {
     70%{transform: translateX(110%);}
@@ -156,7 +199,16 @@ a{
    height: 5px;
    width: 80%;
 }
-
+#projectSections.dark h2,#projectpage.dark h2{
+    background-color: #0a101e;
+}
+#projectSections.dark .relative,#projectpage.dark .relative{
+    background-color:#3e3e3e;
+}
+#projectSections.dark .projectInfo,#projectSections.dark .project,#projectpage.dark .projectInfo,#projectpage.dark .project{
+    background-color: #0a101e;
+    color: white;
+}
 .projectwrapi{
     width: 90%;
 }
@@ -203,6 +255,6 @@ svg{
 }
 
 section.blur{
-  filter: blur(5px);
+  filter: blur(16px);
 }
 
