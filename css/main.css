@@ -649,6 +649,10 @@ video {
   display: none;
 }
 
+.w-full {
+  width: 100%;
+}
+
 .max-w-md {
   max-width: 28rem;
 }
@@ -728,6 +732,11 @@ video {
   background-color: hsl(12 88% 59% / var(--tw-bg-opacity));
 }
 
+.bg-red-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -788,6 +797,11 @@ video {
   font-weight: 700;
 }
 
+.text-dark {
+  --tw-text-opacity: 1;
+  color: hsl(223 49% 8% / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -829,6 +843,13 @@ video {
           user-select: none;
 }
 
+body{
+  background-color: #0a101e;
+  background-image: url('images/backgroungimg2.png');
+  background-attachment: fixed;
+  background-size: contain;
+}
+
 header{
   position: -webkit-sticky;
   position: sticky;
@@ -841,6 +862,12 @@ header{
   -webkit-backdrop-filter: blur(46px);
           backdrop-filter: blur(46px);
   webkit-backdrop-filter: blur(46px);
+  width: 100%;
+}
+
+.nav.dark{
+  color: rgb(231, 231, 231);
+  background-image: linear-gradient(30deg,rgba(10,16,30,0.9),rgba(10,16,30,0.7),rgba(10,16,30,0.6));
 }
 
 .hamburger {
@@ -860,6 +887,12 @@ header{
   left: 0px;
   background-color: #000;
   transition: .3s;
+}
+
+.nav.dark .hamburger-top,
+.nav.dark .hamburger-middle,
+.nav.dark .hamburger-bottom {
+  background-color: white;
 }
 
 .hamburger-middle{
@@ -887,6 +920,20 @@ a{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.mob_menu{
+  color: black;
+  background-image: linear-gradient(30deg,rgba(255,255,255,0.9),rgba(255,255,255,0.7),rgba(255,255,255,0.6));
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+}
+
+.mob_menu.dark{
+  color: rgb(231, 231, 231);
+  background-image: linear-gradient(30deg,rgba(10,16,30,0.9),rgba(10,16,30,0.7),rgba(10,16,30,0.6));
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+}
+
 .active_tap{
   color: hsl(12,88%,59%);
   position: relative;
@@ -907,6 +954,19 @@ a{
 #section1,#projectSections{
   position: relative;
   top: -2cm;
+}
+
+#section1.dark,#projectSections.dark,#skillsection.dark,#projectpage.dark{
+  background-color:#0a101e;
+}
+
+#section1.dark .container{
+  background-color:#0a101e;
+  color: white;
+}
+
+#section1.dark .flex{
+  background-color:#0a101e;
 }
 
 .jobTitle{
@@ -969,6 +1029,13 @@ a{
           animation: blink .3s infinite;
 }
 
+#section1.dark .write::after{
+  border-left: 5px solid rgb(242, 242, 243);
+  border-right: none;
+  border-bottom: none;
+  border-top: none;
+}
+
 @-webkit-keyframes moveleft {
   70%{
     transform: translateX(110%);
@@ -1009,6 +1076,19 @@ a{
   align-self: center;
   height: 5px;
   width: 80%;
+}
+
+#projectSections.dark h2,#projectpage.dark h2{
+  background-color: #0a101e;
+}
+
+#projectSections.dark .relative,#projectpage.dark .relative{
+  background-color:#3e3e3e;
+}
+
+#projectSections.dark .projectInfo,#projectSections.dark .project,#projectpage.dark .projectInfo,#projectpage.dark .project{
+  background-color: #0a101e;
+  color: white;
 }
 
 .projectwrapi{
@@ -1096,6 +1176,10 @@ section.blur{
 @media (min-width: 480px) {
   .sm\:w-auto {
     width: auto;
+  }
+
+  .sm\:p-4 {
+    padding: 1rem;
   }
 }
 

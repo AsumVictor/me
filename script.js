@@ -370,7 +370,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         MyworksContent = `
                 <!--Project Screenshot-->
-                <div class="projectImagebox md:w-1/2 bg-gray-100 flex items-center p-4 ">
+                <div class="projectImagebox md:w-1/2 bg-gray-100 flex items-center p-4">
                    <img src="${Project.imageLink}" alt="${Project.imageAltText}" srcset="${Project.imageLink}">
                </div>
 
