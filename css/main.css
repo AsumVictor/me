@@ -827,7 +827,6 @@ video {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  transition: all .3s;
 }
 
 header{
@@ -1076,7 +1075,7 @@ svg{
 }
 
 section.blur{
-  filter: blur(5px);
+  filter: blur(16px);
 }
 
 .hover\:bg-brightRedLight:hover {
