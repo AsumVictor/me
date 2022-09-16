@@ -8,11 +8,14 @@ const contact_btns = document.querySelectorAll(".contact");
 const mob_btns = document.querySelectorAll(".mob_btn");
 const home_page = document.querySelector(".homepage");
 const project_page = document.querySelector(".projectpages");
-
+const sections = document.querySelectorAll('section');
 
 function openMenu(){
     menuToggler.classList.toggle("open")
     menu.classList.toggle("hidden")
+    sections.forEach((section)=>{
+    section.classList.toggle('blur')
+    })
 };
 
 function show_home_tab(){
