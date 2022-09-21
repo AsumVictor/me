@@ -731,13 +731,26 @@ video {
   border-radius: 9999px;
 }
 
+.border {
+  border-width: 1px;
+}
+
+.border-4 {
+  border-width: 4px;
+}
+
+.border-brightRed {
+  --tw-border-opacity: 1;
+  border-color: hsl(12 88% 59% / var(--tw-border-opacity));
+}
+
 .bg-transparent {
   background-color: transparent;
 }
 
-.bg-red-500 {
+.bg-red-400 {
   --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
 }
 
 .bg-white {
@@ -753,16 +766,6 @@ video {
 .bg-gray-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
-}
-
-.bg-red-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
-}
-
-.bg-red-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
 }
 
 .p-3 {
@@ -869,7 +872,7 @@ video {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  transition: 250ms;
+  transition: 100ms;
 }
 
 body.dark{
@@ -894,10 +897,6 @@ header{
 .nav.dark{
   color: rgb(231, 231, 231);
   background-image: linear-gradient(30deg,rgba(10,16,30,0.9),rgba(10,16,30,0.7),rgba(10,16,30,0.6));
-}
-
-.nav a{
-  transition: .1s;
 }
 
 .hamburger {
@@ -997,6 +996,10 @@ a{
 
 #section1.dark .flex{
   background-color:#0a101e;
+}
+
+#section1.dark button{
+  color:white;
 }
 
 .jobTitle{
@@ -1198,8 +1201,8 @@ section.blur{
 
 .theme_indicator{
   transform: translateX(-5px);
-  height:1.4cm;
-  width: 1.4cm;
+  height:1.1cm;
+  width: 1.1cm;
 }
 
 .theme_indicator.dark{
@@ -1223,9 +1226,19 @@ section.blur{
   background-color: hsl(12 88% 69% / var(--tw-bg-opacity));
 }
 
+.hover\:bg-brightRed:hover {
+  --tw-bg-opacity: 1;
+  background-color: hsl(12 88% 59% / var(--tw-bg-opacity));
+}
+
 .hover\:text-darkGrayishBlue:hover {
   --tw-text-opacity: 1;
   color: hsl(227 12% 61% / var(--tw-text-opacity));
+}
+
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .focus\:outline-none:focus {
