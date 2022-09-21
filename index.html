@@ -20,19 +20,23 @@
        <!--Navigation Bar-->
 <header>
     <nav class=" mx-auto">
-        <div class="bg-transparent sm:p-4 w-full nav dark flex text-dark items-center justify-between font-bold md:justify-around" style="height:2cm;">
+        <div class="bg-transparent sm:p-4 w-full nav flex text-dark items-center justify-between font-bold md:justify-around" style="height:2cm;">
            <!--My logo-->
          <div class="pt-2">
              <img src="images/logo.png" alt="My Logo" srcset="images/logo.png">
          </div>
          <!--Menu LInks-->
-         <div class="hidden md:flex space-x-6">
+         <div class="hidden md:flex space-x-6 flex-row items-center">
             <a href="#" class="hover:text-darkGrayishBlue home active_tap">Home</a>
             <a href="#" class="hover:text-darkGrayishBlue project ">Projects</a>
             <a href="#skills" class="hover:text-darkGrayishBlue skill ">Skills</a>
             <a href="#" class="hover:text-darkGrayishBlue about ">About</a>
             <a href="#" class="hover:text-darkGrayishBlue contact ">Contact</a>
-            <a href="#" class="hover:text-darkGrayishBlue theme">Theme</a>
+            <div class="dark_mode_container flex flex-row items-center justify-between px-2 bg-red-400 rounded-full relative cursor-pointer overflow-hidden" style="width:3cm;height:1.3cm;">
+                   <div class="theme_indicator bg-white rounded-full absolute"></div>     
+                   <div class="light_theme z-10 flex justify-center items-center active" style="height:1.2cm; width: 1.2cm;"><i class="fa fa-sun-o" style="font-size:36px"></i></div>
+                   <div class="dark_theme  z-10 flex justify-center items-center" style="height:1.2cm; width: 1.2cm;"><i class="fa fa-moon-o" style="font-size:36px"></i></div>
+            </div>
          </div>
          <button class="hidden p-3 px-6 text-white bg-brightRed rounded-full baseline 
          md:block hover:bg-brightRedLight">
@@ -48,14 +52,20 @@
         </div>  
           <!-- Mobile Menu-->
         <div class="md:hidden mob_nav">
-          <div id="menu" class="mob_menu dark hidden flex absolute flex-col items-center py-10 spacey-6 
+          <div id="menu" class="mob_menu hidden flex absolute flex-col items-center py-10 spacey-6 
           font-bold sm:w-auto left-6 right-6 drop-shadow-lg">
           <a href="#" class="hover:text-darkGrayishBlue home active_tap mob_btn">Home</a>
           <a href="#" class="hover:text-darkGrayishBlue mt-2 project mob_btn">Projects</a>
           <a href="#skills" class="hover:text-darkGrayishBlue mt-2 skill mob_btn">Skills</a>
           <a href="#" class="hover:text-darkGrayishBlue mt-2 about mob_btn">About me</a>
           <a href="#" class="hover:text-darkGrayishBlue mt-2 contact mob_btn">Contact</a>
-          <a href="#" class="hover:text-darkGrayishBlue mt-2 mob_btn">Theme</a>
+          <div class="line bg-gray-300 mt-3" style="height:0.1cm;width:75%;"></div>
+          <h4>Theme: </h4>
+          <div class="dark_mode_container flex flex-row items-center justify-between px-2 bg-red-400 rounded-full relative cursor-pointer overflow-hidden" style="width:3cm;height:1.3cm;">
+            <div class="theme_indicator bg-white rounded-full absolute"></div>     
+            <div class="light_theme z-10 flex justify-center items-center active" style="height:1.2cm; width: 1.2cm;"><i class="fa fa-sun-o" style="font-size:36px"></i></div>
+            <div class="dark_theme  z-10 flex justify-center items-center" style="height:1.2cm; width: 1.2cm;"><i class="fa fa-moon-o" style="font-size:36px"></i></div>
+     </div>
           </div>
         </div>
         
@@ -64,10 +74,10 @@
 
 <div class="homepage">  
   <!--Section one with animation-->
-  <section id="section1" class="pt-10 dark">
+  <section id="section1" class="pt-10">
       <div class="container  flex flex-col md:flex-row items-center md:items-start justify-around  mx-auto
                    mt-20 space-y-0 md:space-y-0 px-6">
-        <div class="flex flex-col mb-32 space-y-12 bg-red-400 md:w-1/2">
+        <div class="flex flex-col mb-32 space-y-12 md:w-1/2">
            <h1 class="mt-10 max-w-md text-3xl font-bold text-left md:text-4xl">
              Hi,
            </h1> 
@@ -111,7 +121,7 @@
   </section>
 <!--Sections that contains projects-->
 
-  <section id="projectSections" class="dark">
+  <section id="projectSections" class="">
       <div class=" heading flex flex-row item-center mt-12  justify-center md:mt-0">
         <h2 class="text-center text-brightRed font-bold text-1xl p-3 md:text-2xl bg-white">&lt;My Works&gt;</h2>
         <div class="line absolute bg-brightRed rounded-full"></div>
@@ -128,9 +138,9 @@
       </div>
   </section>
 
-  <section id="skillsection" class="dark">
-    <div id="skills" class=" heading flex flex-row item-center -mt-5  justify-center md:-mt-2">
-      <h2 class="text-center text-brightRed font-bold text-1xl p-3 md:text-2xl bg-white">My Skills</h2>
+  <section id="skillsection" class="skills">
+    <div id="skills" class="heading flex flex-row item-center -mt-5  justify-center md:-mt-2">
+      <h2 class="text-center text-brightRed font-bold text-1xl p-3 md:text-2xl bg-white">Skills and Experience</h2>
       <div class="line absolute bg-brightRed rounded-full"></div>
     </div>
     <div class=" heading flex flex-row item-center md:px-12 justify-start md:-mt-2">
@@ -141,8 +151,8 @@
    
      </div>
 
-     <div class=" heading flex flex-row item-center md:px-12 justify-start mt-3">
-      <h2 class="text-left text-darkBlue font-bold text-1xl p-3 md:text-2xl bg-white">Frameworks</h2>
+     <div class=" heading flex flex-row item-center md:px-12 justify-center md:justify-start mt-3">
+      <h2 class="text-left text-darkBlue font-bold text-1xl p-3 md:text-2xl bg-white">Liberies and Frameworks</h2>
     </div>
 
     <div class="frameworkspace flex flex-row justify-center pb-2 flex-wrap pt-4 ">

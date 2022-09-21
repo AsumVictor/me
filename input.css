@@ -4,13 +4,11 @@
 
 *{
     user-select: none;
+    transition: 250ms;
 }
 
-body{
-    background-color: #0a101e;
-    background-image: url('images/backgroungimg2.png');
-    background-attachment: fixed;
-    background-size: contain;
+body.dark{
+   background-color: #0a101e;
 }
 
 header{
@@ -30,6 +28,9 @@ header{
     background-image: linear-gradient(30deg,rgba(10,16,30,0.9),rgba(10,16,30,0.7),rgba(10,16,30,0.6));
 }
 
+.nav a{
+    transition: .1s;
+}
 
 .hamburger {
     cursor: pointer;
@@ -48,7 +49,7 @@ header{
     top: 0px;
     left: 0px;
     background-color: #000;
-    transition: .3s;
+    transition: .1s;
 }
 
 .nav.dark .hamburger-top,
@@ -212,9 +213,16 @@ a{
 .projectwrapi{
     width: 90%;
 }
+#skillsection.dark .heading:first-child h2{
+    background-color: #0a101e;
+}
+
 .progressCard{
     width: 6.6cm;
     transition:  .5s;
+}
+#skillsection.dark .progressCard{
+    background-color: #3e3e3e;
 }
 .progressCard:hover{
     transform: scale(1.05);
@@ -257,4 +265,26 @@ svg{
 section.blur{
   filter: blur(16px);
 }
+.theme_indicator{
+    transform: translateX(-5px);
+    height:1.4cm;
+    width: 1.4cm;
+}
 
+.theme_indicator.dark{
+    transform: translateX(50px);
+}
+
+.light_theme.active{
+    color: hsl(12,88%,59%);
+    font-size: 42px;
+    font-weight: bolder;
+    
+}
+
+.dark_theme.active{
+    color: hsl(12,88%,59%);
+    font-size: 42px;
+    font-weight: bolder;
+    
+}

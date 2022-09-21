@@ -8,7 +8,16 @@ const contact_btns = document.querySelectorAll(".contact");
 const mob_btns = document.querySelectorAll(".mob_btn");
 const home_page = document.querySelector(".homepage");
 const project_page = document.querySelector(".projectpages");
-const sections = document.querySelectorAll('section');
+const sections = document.querySelectorAll(`#section1,#skillsection,#projectSections,
+#projectpage,#projectpage`);
+const dark_themes = document.querySelectorAll('.dark_theme');
+const light_themes = document.querySelectorAll('.light_theme');
+const theme_indicators = document.querySelectorAll('.theme_indicator');
+const body_and_nav = document.querySelectorAll('body,.nav,.mob_menu');
+
+
+
+
 
 function openMenu(){
     menuToggler.classList.toggle("open")
@@ -125,9 +134,42 @@ function show_about_tab(){
   home_page.classList.remove("hidden")
   project_page.classList.add("hidden")
 }
+function to_dark_theme() {
+    theme_indicators.forEach((theme_indicator)=>{
+      theme_indicator.classList.add("dark")
+    })
+    sections.forEach((section)=>{
+      section.classList.add('dark');
+    })
+    body_and_nav.forEach((body)=>{
+      body.classList.add('dark')
+    })
+    dark_themes.forEach((dark_theme)=>{
+      dark_theme.classList.add('active')
+    })
+    light_themes.forEach((light_theme)=>{
+      light_theme.classList.remove('active')
+    })
+}
+function to_light_theme() {
+  theme_indicators.forEach((theme_indicator)=>{
+    theme_indicator.classList.remove("dark")
+  })
+  sections.forEach((section)=>{
+    section.classList.remove('dark');
+  })
+  body_and_nav.forEach((body)=>{
+    body.classList.remove('dark')
+  })
+  dark_themes.forEach((dark_theme)=>{
+    dark_theme.classList.remove('active')
+  })
+  light_themes.forEach((light_theme)=>{
+    light_theme.classList.add('active')
+  })
+}
 
 setInterval(checksection,100)
-
 project_btns.forEach((project_btn)=>{
   project_btn.addEventListener("click",show_project_tab)
 })
@@ -148,6 +190,14 @@ contact_btns.forEach((contact_btn)=>{
 about_btns.forEach((about_btn)=>{
   about_btn.addEventListener("click",show_about_tab)
 })
+
+dark_themes.forEach((dark_theme)=>{
+  dark_theme.addEventListener('click',to_dark_theme)
+})
+light_themes.forEach((light_theme)=>{
+  light_theme.addEventListener('click',to_light_theme)
+})
+
 
 //Arrays of Projects
 const Projects = [
