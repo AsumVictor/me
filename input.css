@@ -274,3 +274,17 @@ section.blur{
 .theme_indicator.dark{
     transform: translateX(50px);
 }
+
+.light_theme.active{
+    color: hsl(12,88%,59%);
+    font-size: 42px;
+    font-weight: bolder;
+    
+}
+
+.dark_theme.active{
+    color: hsl(12,88%,59%);
+    font-size: 42px;
+    font-weight: bolder;
+    
+}

@@ -144,7 +144,12 @@ function to_dark_theme() {
     body_and_nav.forEach((body)=>{
       body.classList.add('dark')
     })
-    
+    dark_themes.forEach((dark_theme)=>{
+      dark_theme.classList.add('active')
+    })
+    light_themes.forEach((light_theme)=>{
+      light_theme.classList.remove('active')
+    })
 }
 function to_light_theme() {
   theme_indicators.forEach((theme_indicator)=>{
@@ -155,6 +160,12 @@ function to_light_theme() {
   })
   body_and_nav.forEach((body)=>{
     body.classList.remove('dark')
+  })
+  dark_themes.forEach((dark_theme)=>{
+    dark_theme.classList.remove('active')
+  })
+  light_themes.forEach((light_theme)=>{
+    light_theme.classList.add('active')
   })
 }
 
