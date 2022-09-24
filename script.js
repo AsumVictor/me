@@ -15,10 +15,6 @@ const light_themes = document.querySelectorAll('.light_theme');
 const theme_indicators = document.querySelectorAll('.theme_indicator');
 const body_and_nav = document.querySelectorAll('body,.nav,.mob_menu');
 
-
-
-
-
 function openMenu(){
     menuToggler.classList.toggle("open")
     menu.classList.toggle("hidden")
@@ -168,6 +164,7 @@ function to_light_theme() {
     light_theme.classList.add('active')
   })
 }
+
 
 setInterval(checksection,100)
 project_btns.forEach((project_btn)=>{
@@ -358,6 +355,8 @@ const Frameworks = [
 
 
 document.addEventListener('DOMContentLoaded', () => {
+  const user_curent_time = new Date();
+   const user_hours = user_curent_time.getHours();
     const projectsContainer = document.querySelector('.projectsContainer'); 
     const language_card_space = document.querySelector('.skillsspace')
     const framework_card_space = document.querySelector('.frameworkspace')
@@ -366,6 +365,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let projectwrap;
     let project;
     let langs;
+    
+    //Change to dark theme Automatically
+    if (user_hours>=18) {
+       to_dark_theme();
+    }
   
     top3Projects.sort(() => 0.5 - Math.random());
     top3Projects.forEach((top3Project) => {

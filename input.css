@@ -4,7 +4,7 @@
 
 *{
     user-select: none;
-    transition: 250ms;
+    transition: 100ms;
 }
 
 body.dark{
@@ -28,9 +28,6 @@ header{
     background-image: linear-gradient(30deg,rgba(10,16,30,0.9),rgba(10,16,30,0.7),rgba(10,16,30,0.6));
 }
 
-.nav a{
-    transition: .1s;
-}
 
 .hamburger {
     cursor: pointer;
@@ -122,6 +119,9 @@ a{
 }
 #section1.dark .flex{
     background-color:#0a101e;
+}
+#section1.dark button{
+    color:white;
 }
 
 .jobTitle{
@@ -267,8 +267,8 @@ section.blur{
 }
 .theme_indicator{
     transform: translateX(-5px);
-    height:1.4cm;
-    width: 1.4cm;
+    height:1.1cm;
+    width: 1.1cm;
 }
 
 .theme_indicator.dark{
