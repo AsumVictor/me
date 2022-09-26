@@ -9,7 +9,7 @@ const mob_btns = document.querySelectorAll(".mob_btn");
 const home_page = document.querySelector(".homepage");
 const project_page = document.querySelector(".projectpages");
 const sections = document.querySelectorAll(`#section1,#skillsection,#projectSections,
-#projectpage,#projectpage`);
+#projectpage,#projectpage,#about_me_section`);
 const dark_themes = document.querySelectorAll('.dark_theme');
 const light_themes = document.querySelectorAll('.light_theme');
 const theme_indicators = document.querySelectorAll('.theme_indicator');
@@ -367,7 +367,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let langs;
     
     //Change to dark theme Automatically
-    if (user_hours>=18) {
+    if (user_hours>=18 || user_hours <=5) {
        to_dark_theme();
     }
   
@@ -375,22 +375,22 @@ document.addEventListener('DOMContentLoaded', () => {
     top3Projects.forEach((top3Project) => {
         // loop through projects languages and display them
         projectLangs = top3Project.tagLanguages.map(
-          (top3lang) => `<div class="lang p-2 rounded-xl bg-gray-200 text-darkBlue font-bold m-2"><p>${top3lang}</p></div>
+          (top3lang) => `<div class="lang p-2 rounded-xl bg-blue-200 text-darkBlue font-bold m-2"><p>${top3lang}</p></div>
           `,
         );
 
         homeMyworksContent = `
                 <!--Project Screenshot-->
-                <div class="projectImagebox md:w-1/2 bg-gray-100 flex items-center p-4 ">
+                <div class="projectImagebox md:w-1/2 flex items-center p-4 ">
                    <img src="${top3Project.imageLink}" alt="${top3Project.imageAltText}" srcset="${top3Project.imageLink}">
                </div>
 
-                <div class="projectInfo md:w-1/2 bg-white p-4">
+                <div class="projectInfo md:w-1/2 p-4">
                   <h3 class="text-2xl text-center uppercase font-bold">${top3Project.projectTitle}</h3>
                   <div class="flex flex-row flex-start">
-                    <p class="px-3 font-bold"><span class=" text-darkBlue">${top3Project.client} </span>  **   
-                     <span class="capitalize  text-darkGrayishBlue">${top3Project.type}</span>  **  
-                     <span class="text-brightRedLight">${top3Project.year}</span> </p>
+                    <p class="px-3 font-bold"><span class=" text-brightRed">${top3Project.client} </span>  **   
+                     <span class="capitalize ">${top3Project.type}</span>  **  
+                     <span class="text-brightRed">${top3Project.year}</span> </p>
                   </div>
                   <div class="projectdetails">
                     <p class="text-1xl font-bold p-3 text-darkGrayishBlue">${top3Project.projectDescription}</p>
@@ -398,11 +398,11 @@ document.addEventListener('DOMContentLoaded', () => {
                   <div class="tagsLanguage flex flex-row justify-start flex-wrap px-4 space-x-2 mt-2">
                                ${projectLangs.join('')}
                   </div>
-                  <div class="liveAndCode flex flex-row justify-start space-x-5 mt-3 p-4">
+                  <div class="liveAndCode flex flex-row md:justify-start justify-center md:space-x-5 space-x-2 mt-3 md:p-4">
                     <button class="p-2 font-bold text-white bg-brightRed rounded-2xl text-center 
                     md:block hover:bg-brightRedLight md:self-start"><a href="${top3Project.liveViewLink}">View live <i class="fa fa-external-link-square"></i></a></button>
-                    <button class="p-2 font-bold text-white bg-brightRed rounded-2xl text-center 
-                    md:block hover:bg-brightRedLight md:self-start"><a href="${top3Project.sourceCodeLink}">Source Code <i class="fa fa-github"></i></a></button>
+                    <button class="p-2 font-bold text-brightRed bg-transparent border-2 border-brightRed rounded-2xl text-center 
+                    md:block hover:bg-brightRedLight hover:text-white md:self-start"><a href="${top3Project.sourceCodeLink}">Source Code <i class="fa fa-github"></i></a></button>
                   </div>
                 </div>
      
@@ -418,22 +418,22 @@ document.addEventListener('DOMContentLoaded', () => {
     Projects.forEach((Project) => {
         // loop through projects languages and display them
         langs = Project.tagLanguages.map(
-          (lang) => `<div class="lang p-2 rounded-xl bg-gray-200 text-darkBlue font-bold m-2"><p>${lang}</p></div>
+          (lang) => `<div class="lang p-2 rounded-xl bg-blue-200 text-darkBlue font-bold m-2"><p>${lang}</p></div>
           `,
         );
 
         MyworksContent = `
                 <!--Project Screenshot-->
-                <div class="projectImagebox md:w-1/2 bg-gray-100 flex items-center p-4">
+                <div class="projectImagebox md:w-1/2  flex items-center p-4">
                    <img src="${Project.imageLink}" alt="${Project.imageAltText}" srcset="${Project.imageLink}">
                </div>
 
-                <div class="projectInfo md:w-1/2 bg-white p-4">
+                <div class="projectInfo md:w-1/2 p-4">
                   <h3 class="text-2xl text-center uppercase font-bold">${Project.projectTitle}</h3>
                   <div class="flex flex-row flex-start">
-                    <p class="px-3 font-bold"><span class=" text-darkBlue">${Project.client} </span>  **   
-                     <span class="capitalize  text-darkGrayishBlue">${Project.type}</span>  **  
-                     <span class="text-brightRedLight">${Project.year}</span> </p>
+                    <p class="px-3 font-bold"><span class=" text-brightRed">${Project.client} </span>  **   
+                     <span class="capitalize ">${Project.type}</span>  **  
+                     <span class="text-brightRed">${Project.year}</span> </p>
                   </div>
                   <div class="projectdetails">
                     <p class="text-1xl font-bold p-3 text-darkGrayishBlue">${Project.projectDescription}</p>
@@ -441,11 +441,11 @@ document.addEventListener('DOMContentLoaded', () => {
                   <div class="tagsLanguage flex flex-row justify-start flex-wrap px-4 space-x-2 mt-2">
                                ${langs.join('')}
                   </div>
-                  <div class="liveAndCode flex flex-row justify-start space-x-5 mt-3 p-4">
+                  <div class="liveAndCode flex flex-row md:justify-start justify-center space-x-2 md:space-x-5 mt-3 md:p-4">
                     <button class="p-2 font-bold text-white bg-brightRed rounded-2xl text-center 
                     md:block hover:bg-brightRedLight md:self-start"><a href="${Project.liveViewLink}">View live <i class="fa fa-external-link-square"></i></a></button>
-                    <button class="p-2 font-bold text-white bg-brightRed rounded-2xl text-center 
-                    md:block hover:bg-brightRedLight md:self-start"><a href="${Project.sourceCodeLink}">Source Code <i class="fa fa-github"></i></a></button>
+                    <button class="p-2 font-bold text-brightRed bg-transparent border-2 border-brightRed rounded-2xl text-center 
+                    md:block hover:bg-brightRedLight hover:text-white md:self-start"><a href="${Project.sourceCodeLink}">Source Code <i class="fa fa-github"></i></a></button>
                   </div>
                 </div>
      
@@ -474,7 +474,7 @@ languages.sort(() => 0.5 - Math.random());
       
      `
      language_card = document.createElement('div')
-     language_card.setAttribute("class",'progressCard mt-5 bg-gray-200 mx-5 flex flex-col items-center pb-4 pt-2 rounded-2xl cursor-pointer')
+     language_card.setAttribute("class",'progressCard mt-5 bg-gray-200 mx-5 flex flex-col items-center pb-4 pt-2 rounded-2xl cursor-pointers')
      language_card.innerHTML= language_card_content;
      language_card_space.appendChild(language_card)
     })

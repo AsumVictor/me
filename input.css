@@ -207,7 +207,6 @@ a{
     background-color:#3e3e3e;
 }
 #projectSections.dark .projectInfo,#projectSections.dark .project,#projectpage.dark .projectInfo,#projectpage.dark .project{
-    background-color: #0a101e;
     color: white;
 }
 .projectwrapi{
@@ -223,6 +222,7 @@ a{
 }
 #skillsection.dark .progressCard{
     background-color: #3e3e3e;
+    color: white;
 }
 .progressCard:hover{
     transform: scale(1.05);
@@ -288,3 +288,11 @@ section.blur{
     font-weight: bolder;
     
 }
+
+#about_me_section.dark{
+   background-color: #0a101e;
+}
+
+#about_me_section.dark .about_me,#about_me_section.dark .about_me h3{
+    color: white;
+ }
