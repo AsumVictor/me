@@ -550,13 +550,13 @@ function blur2() {
   const offline = `<div class="no_connection bg-red-400 p-3" style="">
   <div class="aler_info flex flex-row justify-center items-center space-x-5">
     <p>Can not send message. Check your connection</p>
- 
+ <span class="close">&times;</span>
      </div>
   </div>`
   const online = `<div class="no_connection bg-green-400 p-3" style="">
   <div class="aler_info flex flex-row justify-center items-center space-x-5">
     <p>Message sent. Responding immediately</p>
-    
+    <span class="close">&times;</span>
      </div>
   </div>`
   notification_bar = document.createElement('div')
