@@ -261,7 +261,7 @@ const Projects = [
     projectTitle:"quadratic calculator",
     client:"Global",
     type:"Math",
-    year:"JAug 2022",
+    year:"Aug 2022",
     projectDescription:`This is a project to solve quadratic equation. It contains features
     which allow calculations involving complex numbers. It also contain history which allows user to 
     track previous calculations. NOTE: I did not get time to design this project.`,
@@ -270,7 +270,40 @@ const Projects = [
     sourceCodeLink:"https://github.com/AsumVictor/Quadratic-Calculator",
     imageLink:"screenshots/quadratic.JPG",
     imageAltText:"claculator preview image",  
-}
+},
+{
+  projectTitle:"Wireframe template",
+  client:"Global",
+  type:"Landing",
+  year:"Aug 2022",
+  projectDescription:`
+                        This is a wireframe template website build with bootstrap css.
+                        Are you ready to create a landing web? This template is for you.
+                        It is easy to use and editable;you just need to edit the source code and fill
+                        you content.
+  `,
+  tagLanguages:['Boostrap','HTML 5','CSS 3','CSS flex'],
+  liveViewLink:"https://asumvictor.github.io/Bootstrap-grid-wireframe/",
+  sourceCodeLink:"https://github.com/AsumVictor/Bootstrap-grid-wireframe",
+  imageLink:"screenshots/template.png",
+  imageAltText:"Template short Video",  
+},
+{
+  projectTitle:"My profile",
+  client:"Personal",
+  type:"Me",
+  year:"July 2022",
+  projectDescription:`
+                       My profile conatins all my social media links. This project is 
+                       quite different from my personal portfolio. Feel free to visit this 
+                       awesome site.
+  `,
+  tagLanguages:['HTML 5','CSS 3','Boostrap','CSS flex','Javascript'],
+  liveViewLink:"https://asumvictor.github.io/profile/",
+  sourceCodeLink:"https://github.com/AsumVictor/profile",
+  imageLink:"screenshots/Myprofile.png",
+  imageAltText:"My profile card image",  
+  }
 ];
 
 const top3Projects = [
