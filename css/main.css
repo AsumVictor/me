@@ -1424,7 +1424,7 @@ textarea{
 
 .notification{
   bottom: 0;
-  left: 0;
+  left: 0px;
   position: fixed;
   display: flex;
   flex-direction: column;

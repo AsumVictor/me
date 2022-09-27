@@ -256,7 +256,21 @@ const Projects = [
       sourceCodeLink:"https://github.com/AsumVictor/Frontendmentor-product-card-challenge",
       imageLink:"screenshots/productCard.jpg",
       imageAltText:"product card image",  
-  }
+  },
+  {
+    projectTitle:"quadratic calculator",
+    client:"Global",
+    type:"Math",
+    year:"JAug 2022",
+    projectDescription:`This is a project to solve quadratic equation. It contains features
+    which allow calculations involving complex numbers. It also contain history which allows user to 
+    track previous calculations. NOTE: I did not get time to design this project.`,
+    tagLanguages:['Javascript','HTML 5','CSS 3','CSS flex'],
+    liveViewLink:"https://asumvictor.github.io/Quadratic-Calculator/",
+    sourceCodeLink:"https://github.com/AsumVictor/Quadratic-Calculator",
+    imageLink:"screenshots/quadratic.JPG",
+    imageAltText:"claculator preview image",  
+}
 ];
 
 const top3Projects = [
@@ -310,7 +324,8 @@ const top3Projects = [
         sourceCodeLink:"https://github.com/AsumVictor/Frontendmentor-product-card-challenge",
         imageLink:"screenshots/productCard.jpg",
         imageAltText:"product card image",  
-    }
+    },
+    
 ];
 
 const languages = [
