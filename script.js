@@ -9,11 +9,19 @@ const mob_btns = document.querySelectorAll(".mob_btn");
 const home_page = document.querySelector(".homepage");
 const project_page = document.querySelector(".projectpages");
 const sections = document.querySelectorAll(`#section1,#skillsection,#projectSections,
-#projectpage,#projectpage`);
+#projectpage,#projectpage,#about_me_section`);
 const dark_themes = document.querySelectorAll('.dark_theme');
 const light_themes = document.querySelectorAll('.light_theme');
 const theme_indicators = document.querySelectorAll('.theme_indicator');
 const body_and_nav = document.querySelectorAll('body,.nav,.mob_menu');
+const input1 = document.querySelector('#user_name');
+const input_div1 = document.querySelector('.user_name_div');
+const input2 = document.querySelector('#user_email');
+const input_div2 = document.querySelector('.user_email_div');
+const input3 = document.querySelector('#message_box');
+const input_div3 = document.querySelector('.user_message_div');
+const submit_btn = document.querySelector('#submit');
+
 
 function openMenu(){
     menuToggler.classList.toggle("open")
@@ -367,7 +375,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let langs;
     
     //Change to dark theme Automatically
-    if (user_hours>=18) {
+    if (user_hours>=18 || user_hours <=5) {
        to_dark_theme();
     }
   
@@ -375,22 +383,22 @@ document.addEventListener('DOMContentLoaded', () => {
     top3Projects.forEach((top3Project) => {
         // loop through projects languages and display them
         projectLangs = top3Project.tagLanguages.map(
-          (top3lang) => `<div class="lang p-2 rounded-xl bg-gray-200 text-darkBlue font-bold m-2"><p>${top3lang}</p></div>
+          (top3lang) => `<div class="lang p-2 rounded-xl bg-blue-200 text-darkBlue font-bold m-2"><p>${top3lang}</p></div>
           `,
         );
 
         homeMyworksContent = `
                 <!--Project Screenshot-->
-                <div class="projectImagebox md:w-1/2 bg-gray-100 flex items-center p-4 ">
+                <div class="projectImagebox md:w-1/2 flex items-center p-4 ">
                    <img src="${top3Project.imageLink}" alt="${top3Project.imageAltText}" srcset="${top3Project.imageLink}">
                </div>
 
-                <div class="projectInfo md:w-1/2 bg-white p-4">
+                <div class="projectInfo md:w-1/2 p-4">
                   <h3 class="text-2xl text-center uppercase font-bold">${top3Project.projectTitle}</h3>
                   <div class="flex flex-row flex-start">
-                    <p class="px-3 font-bold"><span class=" text-darkBlue">${top3Project.client} </span>  **   
-                     <span class="capitalize  text-darkGrayishBlue">${top3Project.type}</span>  **  
-                     <span class="text-brightRedLight">${top3Project.year}</span> </p>
+                    <p class="px-3 font-bold"><span class=" text-brightRed">${top3Project.client} </span>  **   
+                     <span class="capitalize ">${top3Project.type}</span>  **  
+                     <span class="text-brightRed">${top3Project.year}</span> </p>
                   </div>
                   <div class="projectdetails">
                     <p class="text-1xl font-bold p-3 text-darkGrayishBlue">${top3Project.projectDescription}</p>
@@ -398,11 +406,11 @@ document.addEventListener('DOMContentLoaded', () => {
                   <div class="tagsLanguage flex flex-row justify-start flex-wrap px-4 space-x-2 mt-2">
                                ${projectLangs.join('')}
                   </div>
-                  <div class="liveAndCode flex flex-row justify-start space-x-5 mt-3 p-4">
+                  <div class="liveAndCode flex flex-row md:justify-start justify-center md:space-x-5 space-x-2 mt-3 md:p-4">
                     <button class="p-2 font-bold text-white bg-brightRed rounded-2xl text-center 
                     md:block hover:bg-brightRedLight md:self-start"><a href="${top3Project.liveViewLink}">View live <i class="fa fa-external-link-square"></i></a></button>
-                    <button class="p-2 font-bold text-white bg-brightRed rounded-2xl text-center 
-                    md:block hover:bg-brightRedLight md:self-start"><a href="${top3Project.sourceCodeLink}">Source Code <i class="fa fa-github"></i></a></button>
+                    <button class="p-2 font-bold text-brightRed bg-transparent border-2 border-brightRed rounded-2xl text-center 
+                    md:block hover:bg-brightRedLight hover:text-white md:self-start"><a href="${top3Project.sourceCodeLink}">Source Code <i class="fa fa-github"></i></a></button>
                   </div>
                 </div>
      
@@ -418,22 +426,22 @@ document.addEventListener('DOMContentLoaded', () => {
     Projects.forEach((Project) => {
         // loop through projects languages and display them
         langs = Project.tagLanguages.map(
-          (lang) => `<div class="lang p-2 rounded-xl bg-gray-200 text-darkBlue font-bold m-2"><p>${lang}</p></div>
+          (lang) => `<div class="lang p-2 rounded-xl bg-blue-200 text-darkBlue font-bold m-2"><p>${lang}</p></div>
           `,
         );
 
         MyworksContent = `
                 <!--Project Screenshot-->
-                <div class="projectImagebox md:w-1/2 bg-gray-100 flex items-center p-4">
+                <div class="projectImagebox md:w-1/2  flex items-center p-4">
                    <img src="${Project.imageLink}" alt="${Project.imageAltText}" srcset="${Project.imageLink}">
                </div>
 
-                <div class="projectInfo md:w-1/2 bg-white p-4">
+                <div class="projectInfo md:w-1/2 p-4">
                   <h3 class="text-2xl text-center uppercase font-bold">${Project.projectTitle}</h3>
                   <div class="flex flex-row flex-start">
-                    <p class="px-3 font-bold"><span class=" text-darkBlue">${Project.client} </span>  **   
-                     <span class="capitalize  text-darkGrayishBlue">${Project.type}</span>  **  
-                     <span class="text-brightRedLight">${Project.year}</span> </p>
+                    <p class="px-3 font-bold"><span class=" text-brightRed">${Project.client} </span>  **   
+                     <span class="capitalize ">${Project.type}</span>  **  
+                     <span class="text-brightRed">${Project.year}</span> </p>
                   </div>
                   <div class="projectdetails">
                     <p class="text-1xl font-bold p-3 text-darkGrayishBlue">${Project.projectDescription}</p>
@@ -441,11 +449,11 @@ document.addEventListener('DOMContentLoaded', () => {
                   <div class="tagsLanguage flex flex-row justify-start flex-wrap px-4 space-x-2 mt-2">
                                ${langs.join('')}
                   </div>
-                  <div class="liveAndCode flex flex-row justify-start space-x-5 mt-3 p-4">
+                  <div class="liveAndCode flex flex-row md:justify-start justify-center space-x-2 md:space-x-5 mt-3 md:p-4">
                     <button class="p-2 font-bold text-white bg-brightRed rounded-2xl text-center 
                     md:block hover:bg-brightRedLight md:self-start"><a href="${Project.liveViewLink}">View live <i class="fa fa-external-link-square"></i></a></button>
-                    <button class="p-2 font-bold text-white bg-brightRed rounded-2xl text-center 
-                    md:block hover:bg-brightRedLight md:self-start"><a href="${Project.sourceCodeLink}">Source Code <i class="fa fa-github"></i></a></button>
+                    <button class="p-2 font-bold text-brightRed bg-transparent border-2 border-brightRed rounded-2xl text-center 
+                    md:block hover:bg-brightRedLight hover:text-white md:self-start"><a href="${Project.sourceCodeLink}">Source Code <i class="fa fa-github"></i></a></button>
                   </div>
                 </div>
      
@@ -474,7 +482,7 @@ languages.sort(() => 0.5 - Math.random());
       
      `
      language_card = document.createElement('div')
-     language_card.setAttribute("class",'progressCard mt-5 bg-gray-200 mx-5 flex flex-col items-center pb-4 pt-2 rounded-2xl cursor-pointer')
+     language_card.setAttribute("class",'progressCard mt-5 bg-gray-200 mx-5 flex flex-col items-center pb-4 pt-2 rounded-2xl cursor-pointers')
      language_card.innerHTML= language_card_content;
      language_card_space.appendChild(language_card)
     })
@@ -502,4 +510,82 @@ languages.sort(() => 0.5 - Math.random());
     })
 
 });
+
+function focus1() {
+  input_div1.classList.replace('blur_input','focus')
+}
+function blur1() {
+  if (input1.value=='') {
+    input_div1.classList.replace('focus','blur_input')
+  } else {
+    input_div1.classList.replace('blur_input','focus')
+  }
+}
+function focus2() {
+  input_div2.classList.replace('blur_input','focus')
+}
+function blur2() {
+  if (input2.value=='') {
+    input_div2.classList.replace('focus','blur_input')
+  } else {
+    input_div2.classList.replace('blur_input','focus')
+  }}
+  
+  function focus3() {
+    input_div3.classList.replace('blur_input','focus')
+  }
+  function blur3() {
+    if (input3.value=='') {
+      input_div3.classList.replace('focus','blur_input')
+    } else {
+      input_div3.classList.replace('blur_input','focus')
+    }
+  }
+  input1.addEventListener('focus',focus1)
+  input1.addEventListener('blur',blur1)
+  input2.addEventListener('focus',focus2)
+  input2.addEventListener('blur',blur2)
+  input3.addEventListener('focus',focus3)
+  input3.addEventListener('blur',blur3)
+  const offline = `<div class="no_connection bg-red-400 p-3" style="">
+  <div class="aler_info flex flex-row justify-center items-center space-x-5">
+    <p>Can not send message. Check your connection</p>
+    <span><i class="fa fa-github cursor-pointer"></i></span>
+     </div>
+  </div>`
+  const online = `<div class="no_connection bg-green-400 p-3" style="">
+  <div class="aler_info flex flex-row justify-center items-center space-x-5">
+    <p>Message sent. Responding immediately</p>
+    <span><i class="fa fa-github cursor-pointer"></i></span>
+     </div>
+  </div>`
+  notification_bar = document.createElement('div')
+  notification_bar.setAttribute('class','notification fixed p-2 z-40')
+submit_btn.addEventListener('click',(event)=>{
+  home_page.appendChild(notification_bar)
+  if (input1.value!='' && input2.value!='' && input3.value!='' && input2.validity.valid ) {
+    event.preventDefault(); 
+    if (navigator.onLine) {
+     let contain = document.createElement('div')
+      contain.innerHTML= online;
+      notification_bar.appendChild(contain)
+      setTimeout(()=>{
+        notification_bar.removeChild(contain)
+     },2000)
+     input1.value=""
+     input2.value=''
+     input3.value=''
+     blur1()
+     blur2()
+     blur3()
+    } else {
+      let contain = document.createElement('div')
+      contain.innerHTML= offline;
+      notification_bar.appendChild(contain)
+      setTimeout(()=>{
+        notification_bar.removeChild(contain)
+     },1000)
+  }
+     
+  }})
 
