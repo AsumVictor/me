@@ -14,6 +14,14 @@ const dark_themes = document.querySelectorAll('.dark_theme');
 const light_themes = document.querySelectorAll('.light_theme');
 const theme_indicators = document.querySelectorAll('.theme_indicator');
 const body_and_nav = document.querySelectorAll('body,.nav,.mob_menu');
+const input1 = document.querySelector('#user_name');
+const input_div1 = document.querySelector('.user_name_div');
+const input2 = document.querySelector('#user_email');
+const input_div2 = document.querySelector('.user_email_div');
+const input3 = document.querySelector('#message_box');
+const input_div3 = document.querySelector('.user_message_div');
+const submit_btn = document.querySelector('#submit');
+
 
 function openMenu(){
     menuToggler.classList.toggle("open")
@@ -502,4 +510,82 @@ languages.sort(() => 0.5 - Math.random());
     })
 
 });
+
+function focus1() {
+  input_div1.classList.replace('blur_input','focus')
+}
+function blur1() {
+  if (input1.value=='') {
+    input_div1.classList.replace('focus','blur_input')
+  } else {
+    input_div1.classList.replace('blur_input','focus')
+  }
+}
+function focus2() {
+  input_div2.classList.replace('blur_input','focus')
+}
+function blur2() {
+  if (input2.value=='') {
+    input_div2.classList.replace('focus','blur_input')
+  } else {
+    input_div2.classList.replace('blur_input','focus')
+  }}
+  
+  function focus3() {
+    input_div3.classList.replace('blur_input','focus')
+  }
+  function blur3() {
+    if (input3.value=='') {
+      input_div3.classList.replace('focus','blur_input')
+    } else {
+      input_div3.classList.replace('blur_input','focus')
+    }
+  }
+  input1.addEventListener('focus',focus1)
+  input1.addEventListener('blur',blur1)
+  input2.addEventListener('focus',focus2)
+  input2.addEventListener('blur',blur2)
+  input3.addEventListener('focus',focus3)
+  input3.addEventListener('blur',blur3)
+  const offline = `<div class="no_connection bg-red-400 p-3" style="">
+  <div class="aler_info flex flex-row justify-center items-center space-x-5">
+    <p>Can not send message. Check your connection</p>
+    <span><i class="fa fa-github cursor-pointer"></i></span>
+     </div>
+  </div>`
+  const online = `<div class="no_connection bg-green-400 p-3" style="">
+  <div class="aler_info flex flex-row justify-center items-center space-x-5">
+    <p>Message sent. Responding immediately</p>
+    <span><i class="fa fa-github cursor-pointer"></i></span>
+     </div>
+  </div>`
+  notification_bar = document.createElement('div')
+  notification_bar.setAttribute('class','notification fixed p-2 z-40')
+submit_btn.addEventListener('click',(event)=>{
+  home_page.appendChild(notification_bar)
+  if (input1.value!='' && input2.value!='' && input3.value!='' && input2.validity.valid ) {
+    event.preventDefault(); 
+    if (navigator.onLine) {
+     let contain = document.createElement('div')
+      contain.innerHTML= online;
+      notification_bar.appendChild(contain)
+      setTimeout(()=>{
+        notification_bar.removeChild(contain)
+     },2000)
+     input1.value=""
+     input2.value=''
+     input3.value=''
+     blur1()
+     blur2()
+     blur3()
+    } else {
+      let contain = document.createElement('div')
+      contain.innerHTML= offline;
+      notification_bar.appendChild(contain)
+      setTimeout(()=>{
+        notification_bar.removeChild(contain)
+     },1000)
+  }
+     
+  }})
 

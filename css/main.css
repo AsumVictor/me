@@ -641,6 +641,10 @@ video {
   margin-top: 1.5rem;
 }
 
+.mt-8 {
+  margin-top: 2rem;
+}
+
 .mt-5 {
   margin-top: 1.25rem;
 }
@@ -657,20 +661,16 @@ video {
   display: none;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .w-full {
   width: 100%;
 }
 
-.w-10 {
-  width: 2.5rem;
-}
-
-.w-10\/12 {
-  width: 83.333333%;
-}
-
-.w-9\/12 {
-  width: 75%;
+.w-6\/12 {
+  width: 50%;
 }
 
 .max-w-md {
@@ -697,20 +697,12 @@ video {
   flex-wrap: wrap;
 }
 
-.items-start {
-  align-items: flex-start;
-}
-
 .items-center {
   align-items: center;
 }
 
 .justify-start {
   justify-content: flex-start;
-}
-
-.justify-end {
-  justify-content: flex-end;
 }
 
 .justify-center {
@@ -761,6 +753,14 @@ video {
   border-radius: 9999px;
 }
 
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -772,6 +772,11 @@ video {
 .border-brightRed {
   --tw-border-opacity: 1;
   border-color: hsl(12 88% 59% / var(--tw-border-opacity));
+}
+
+.border-red-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(254 202 202 / var(--tw-border-opacity));
 }
 
 .bg-transparent {
@@ -806,16 +811,12 @@ video {
   padding: 1rem;
 }
 
-.p-5 {
-  padding: 1.25rem;
-}
-
 .p-10 {
   padding: 2.5rem;
 }
 
-.p-6 {
-  padding: 1.5rem;
+.p-2 {
+  padding: 0.5rem;
 }
 
 .px-2 {
@@ -921,6 +922,10 @@ video {
 .underline {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+}
+
+.outline-0 {
+  outline-width: 0px;
 }
 
 .drop-shadow-lg {
@@ -1285,8 +1290,145 @@ section.blur{
   background-color: #0a101e;
 }
 
-#about_me_section.dark .about_me,#about_me_section.dark .about_me h3{
+#about_me_section.dark .about_me,#about_me_section.dark .about_me h3,#about_me_section.dark .contact_me{
   color: white;
+}
+
+#about_me_section.dark .contact_me span{
+  background-color: #0a101e;
+}
+
+.input{
+  height: 1.5cm;
+}
+
+.user_message_div{
+  height: 4cm;
+}
+
+.input.focus,.user_message_div.focus{
+  border-color: hsl(12,88%,59%);
+}
+
+.input.focus span{
+  -webkit-animation: tranlaste_top .5s forwards;
+          animation: tranlaste_top .5s forwards;
+  -webkit-animation-delay: var(--delay);
+          animation-delay: var(--delay);
+  background-color: white;
+  padding: 6px;
+}
+
+.user_message_div.focus span{
+  -webkit-animation: tranlaste_top1 .5s forwards;
+          animation: tranlaste_top1 .5s forwards;
+  -webkit-animation-delay: var(--delay);
+          animation-delay: var(--delay);
+  background-color: white;
+  padding: 6px;
+}
+
+.input.blur_input span,.user_message_div.blur_input span{
+  -webkit-animation: tranlaste_down .8s forwards;
+          animation: tranlaste_down .8s forwards;
+  -webkit-animation-delay: var(--delay);
+          animation-delay: var(--delay);
+}
+
+.user_message_div.blur_input span{
+  -webkit-animation: tranlaste_down .8s forwards;
+          animation: tranlaste_down .8s forwards;
+  -webkit-animation-delay: var(--delay);
+          animation-delay: var(--delay);
+}
+
+.input span,.user_message_div span{
+  padding: 4px;
+  transition: 1s;
+}
+
+@-webkit-keyframes tranlaste_top {
+  0%{
+    transform: translateY(5%);
+  }
+
+  100%{
+    transform: translateY(-80%);
+  }
+}
+
+@keyframes tranlaste_top {
+  0%{
+    transform: translateY(5%);
+  }
+
+  100%{
+    transform: translateY(-80%);
+  }
+}
+
+@-webkit-keyframes tranlaste_top1 {
+  0%{
+    transform: translateY(5%);
+  }
+
+  100%{
+    transform: translateY(-2cm);
+  }
+}
+
+@keyframes tranlaste_top1 {
+  0%{
+    transform: translateY(5%);
+  }
+
+  100%{
+    transform: translateY(-2cm);
+  }
+}
+
+@-webkit-keyframes tranlaste_down {
+  0%{
+    transform: translateY(-80%);
+  }
+
+  100%{
+    transform: translateY(0px );
+  }
+}
+
+@keyframes tranlaste_down {
+  0%{
+    transform: translateY(-80%);
+  }
+
+  100%{
+    transform: translateY(0px );
+  }
+}
+
+input{
+  height:100%;
+  width: 100%;
+  z-index: 1;
+  top: 0px;
+  left:0px;
+}
+
+textarea{
+  height: 4cm;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+.notification{
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  z-index: 50;
 }
 
 .hover\:bg-brightRedLight:hover {
@@ -1362,6 +1504,10 @@ section.blur{
     width: 75%;
   }
 
+  .md\:w-7\/12 {
+    width: 58.333333%;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -1401,14 +1547,14 @@ section.blur{
     padding-right: 3rem;
   }
 
-  .md\:px-3 {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
-
   .md\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  .md\:px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 
   .md\:pr-4 {
