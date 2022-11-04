@@ -7,6 +7,7 @@
     transition: 100ms;
 }
 
+
 body.dark{
    background-color: #0a101e;
 }
@@ -209,9 +210,7 @@ a{
 #projectSections.dark .projectInfo,#projectSections.dark .project,#projectpage.dark .projectInfo,#projectpage.dark .project{
     color: white;
 }
-.projectwrapi{
-    width: 90%;
-}
+
 #skillsection.dark .heading:first-child h2{
     background-color: #0a101e;
 }
@@ -376,4 +375,39 @@ textarea{
     display: flex;
     flex-direction: column;
     z-index: 50;
+}
+
+
+.project_modal_box{
+    position: fixed;
+    height:100%;
+    width: 100%;
+    left: 0px;
+    transform: scale(0);
+    backdrop-filter: blur(40px);
+    background-color: transparent;
+    top: 0px; 
+    z-index:100;
+    overflow-y: scroll;
+}
+
+.show{
+    transform: scale(1);
+}
+
+.close{
+    transform: scale(0);
+}
+
+.modal_close{
+    position: absolute;
+    height: 2.2cm;
+    width: 100%;
+}
+
+.modal_close button{
+    height: 1.3cm;
+    width: 1.3cm;
+    background-color: rgba(10,16,30,.4);
+    backdrop-filter: blur(50px);
 }
