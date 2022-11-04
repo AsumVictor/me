@@ -21,6 +21,7 @@ const input_div2 = document.querySelector('.user_email_div');
 const input3 = document.querySelector('#message_box');
 const input_div3 = document.querySelector('.user_message_div');
 const submit_btn = document.querySelector('#submit');
+const body = document.querySelector('body');
 
 
 function openMenu(){
@@ -323,7 +324,11 @@ const top3Projects = [
         sourceCodeLink:"https://github.io/AsumVictor/order-summary-card",
         imageLink:"screenshots/orderSummary.jpg",
         imageAltText:"order summary image", 
-         
+        privateClasses: {
+          see_project: 'order-summary-image-btn',
+          modalBox: 'order-summary-modalBox',
+          closebtn: 'order-summary-close-btn',
+        }
     },
     {
         projectTitle:"QR code component",
@@ -340,7 +345,11 @@ const top3Projects = [
         sourceCodeLink:"https://github.io/AsumVictor/frontendMentor-QR-code-component",
         imageLink:"screenshots/qrCode.jpg",
         imageAltText:"QR code component image", 
-         
+        privateClasses: {
+           see_project: 'QR-code-image-btn',
+           modalBox: 'QR-code-modalBox',
+           closebtn: 'QR-code-close-btn',
+        }
     },
     {
         projectTitle:"product card",
@@ -357,6 +366,11 @@ const top3Projects = [
         sourceCodeLink:"https://github.com/AsumVictor/Frontendmentor-product-card-challenge",
         imageLink:"screenshots/productCard.jpg",
         imageAltText:"product card image",  
+      privateClasses: {
+         see_project: 'product-card-image-btn',
+         modalBox: 'product-card-modalBox',
+         closebtn: 'product-card-close-btn',
+      }
     },
     
 ];
@@ -421,6 +435,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let projectwrap;
     let project;
     let langs;
+    let project_modal_box;
+
     
     //Change to dark theme Automatically
     if (user_hours>=18 || user_hours <=5) {
@@ -429,6 +445,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
     top3Projects.sort(() => 0.5 - Math.random());
     top3Projects.forEach((top3Project) => {
+      
         // loop through projects languages and display them
         projectLangs = top3Project.tagLanguages.map(
           (top3lang) => `<div class="lang p-2 rounded-xl bg-blue-200 text-darkBlue font-bold m-2"><p>${top3lang}</p></div>
@@ -455,20 +472,80 @@ document.addEventListener('DOMContentLoaded', () => {
                                ${projectLangs.join('')}
                   </div>
                   <div class="liveAndCode flex flex-row md:justify-start justify-center md:space-x-5 space-x-2 mt-3 md:p-4">
-                    <button class="p-2 font-bold text-white bg-brightRed rounded-2xl text-center 
-                    md:block hover:bg-brightRedLight md:self-start"><a href="${top3Project.liveViewLink}">View live <i class="fa fa-external-link-square"></i></a></button>
-                    <button class="p-2 font-bold text-brightRed bg-transparent border-2 border-brightRed rounded-2xl text-center 
-                    md:block hover:bg-brightRedLight hover:text-white md:self-start"><a href="${top3Project.sourceCodeLink}">Source Code <i class="fa fa-github"></i></a></button>
-                  </div>
+                    <button class="p-2 see_full_project font-bold text-white bg-brightRed ${top3Project.privateClasses.see_project} rounded-2xl text-center 
+                    md:block hover:bg-brightRedLight md:self-start">See Project</button>
+
                 </div>
-     
+
+            
      `         
+
+     x= `
+     <div class="modal_close rounded-xl flex justify-center items-end">
+         <button class='modal_close_btn rounded-full text-red-500 font-bold text-5xl ${top3Project.privateClasses.closebtn} 
+         text-center items-center flex justify-center'>&times;</button>
+     </div>
+
+     <!--Project Screenshot-->
+     <div class=''>
+     <div class="projectImagebox md:w-1/2 flex items-center p-4 ">
+        <img src="${top3Project.imageLink}" alt="${top3Project.imageAltText}" srcset="${top3Project.imageLink}">
+    </div>
+
+     <div class="projectInfo md:w-1/2 p-4">
+       <h3 class="text-2xl text-center uppercase font-bold">${top3Project.projectTitle}</h3>
+       <div class="flex flex-row flex-start">
+         <p class="px-3 font-bold"><span class=" text-brightRed">${top3Project.client} </span>  **   
+          <span class="capitalize ">${top3Project.type}</span>  **  
+          <span class="text-brightRed">${top3Project.year}</span> </p>
+       </div>
+       <div class="projectdetails">
+         <p class="text-1xl font-bold p-3 text-darkGrayishBlue">${top3Project.projectDescription}</p>
+       </div>
+       <div class="tagsLanguage flex flex-row justify-start flex-wrap px-4 space-x-2 mt-2">
+                    ${projectLangs.join('')}
+       </div>
+       <div class="liveAndCode flex flex-row md:justify-start justify-center md:space-x-5 space-x-2 mt-3 md:p-4">
+         <button class="p-2 see_full_project font-bold text-white bg-brightRed ${top3Project.privateClasses.see_project} rounded-2xl text-center 
+         md:block hover:bg-brightRedLight md:self-start">See Project</button>
+
+     </div>
+
+</div>
+     `
+
         projectwrap = document.createElement('div')
-        projectwrap.setAttribute("class"," relative bg-gray-100 flex flex-col md:flex-row md:p-7 mt-8 md:space-x-7 rounded-2xl")
+        projectwrap.setAttribute("class"," relative bg-gray-100 flex flex-col md:flex-row md:p-7 p-4 mt-8 md:space-x-7 rounded-2xl")
         projectwrap.innerHTML= homeMyworksContent;
         projectsContainer.appendChild(projectwrap)
+        project_modal_box = document.createElement('div')
+        project_modal_box.setAttribute('class',`project_modal_box ${top3Project.privateClasses.modalBox}`)
+        project_modal_box.setAttribute('id',`${top3Project.privateClasses.modalBox}`)
+        project_modal_box.innerHTML= x;
+        projectsContainer.appendChild(project_modal_box)
+       
            });
 
+
+  document.addEventListener('click',(e)=>{
+    let project_modal_box;
+    top3Projects.forEach((top3Project)=>{
+      project_modal_box = document.getElementById(top3Project.privateClasses.modalBox);
+    if (e.target.classList.contains(top3Project.privateClasses.see_project)) {
+        project_modal_box.classList.add('show')
+        project_modal_box.classList.remove('close')
+        document.body.style.overflowY='hidden'
+    }
+
+    if (e.target.classList.contains(top3Project.privateClasses.closebtn)) {
+      project_modal_box.classList.add('close')
+      project_modal_box.classList.remove('show')
+      document.body.style.overflowY='scroll'
+  }
+})
+
+})
+          
   // craete projects on project main screen
   Projects.sort(() => 0.5 - Math.random());
     Projects.forEach((Project) => {
