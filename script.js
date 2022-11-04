@@ -482,8 +482,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
      x= `
      <div class="modal_close rounded-xl flex justify-center items-end">
-         <button class='modal_close_btn rounded-full text-red-500 font-bold text-5xl ${top3Project.privateClasses.closebtn} 
-         text-center items-center flex justify-center'>&times;</button>
+         <div class='modal_close_btn rounded-full text-red-500 font-bold text-5xl ${top3Project.privateClasses.closebtn} 
+         text-center items-center flex cursor-pointer justify-center'>&times;</div>
      </div>
 
      <!--Project Screenshot-->
@@ -492,26 +492,6 @@ document.addEventListener('DOMContentLoaded', () => {
         <img src="${top3Project.imageLink}" alt="${top3Project.imageAltText}" srcset="${top3Project.imageLink}">
     </div>
 
-     <div class="projectInfo md:w-1/2 p-4">
-       <h3 class="text-2xl text-center uppercase font-bold">${top3Project.projectTitle}</h3>
-       <div class="flex flex-row flex-start">
-         <p class="px-3 font-bold"><span class=" text-brightRed">${top3Project.client} </span>  **   
-          <span class="capitalize ">${top3Project.type}</span>  **  
-          <span class="text-brightRed">${top3Project.year}</span> </p>
-       </div>
-       <div class="projectdetails">
-         <p class="text-1xl font-bold p-3 text-darkGrayishBlue">${top3Project.projectDescription}</p>
-       </div>
-       <div class="tagsLanguage flex flex-row justify-start flex-wrap px-4 space-x-2 mt-2">
-                    ${projectLangs.join('')}
-       </div>
-       <div class="liveAndCode flex flex-row md:justify-start justify-center md:space-x-5 space-x-2 mt-3 md:p-4">
-         <button class="p-2 see_full_project font-bold text-white bg-brightRed ${top3Project.privateClasses.see_project} rounded-2xl text-center 
-         md:block hover:bg-brightRedLight md:self-start">See Project</button>
-
-     </div>
-
-</div>
      `
 
         projectwrap = document.createElement('div')

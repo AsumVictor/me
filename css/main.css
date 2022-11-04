@@ -1433,12 +1433,16 @@ textarea{
   width: 100%;
   left: 0px;
   transform: scale(0);
-  -webkit-backdrop-filter: blur(40px);
-          backdrop-filter: blur(40px);
-  background-color: transparent;
+  -webkit-backdrop-filter: blur(46px);
+          backdrop-filter: blur(46px);
   top: 0px;
   z-index:100;
   overflow-y: scroll;
+  background-image: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.3),rgba(255,255,255,0.5));
+}
+
+#projectSections.dark .project_modal_box{
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.3),rgba(0,0,0,0.6));
 }
 
 .show{
@@ -1455,10 +1459,10 @@ textarea{
   width: 100%;
 }
 
-.modal_close button{
+.modal_close_btn{
   height: 1.3cm;
   width: 1.3cm;
-  background-color: rgba(10,16,30,.4);
+  background-color: rgba(0,0,0,.4);
   -webkit-backdrop-filter: blur(50px);
           backdrop-filter: blur(50px);
 }
