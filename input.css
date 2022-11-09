@@ -384,30 +384,88 @@ textarea{
     width: 100%;
     left: 0px;
     transform: scale(0);
-    backdrop-filter: blur(40px);
-    background-color: transparent;
+    backdrop-filter: blur(46px);
+    visibility: hidden;
     top: 0px; 
     z-index:100;
     overflow-y: scroll;
+   background-image: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.3),rgba(255,255,255,0.5));
+   scrollbar-color: red;
+
+}
+
+#projectSections.dark .project_modal_box{
+     background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.3),rgba(0,0,0,0.6));
+
 }
 
 .show{
-    transform: scale(1);
+    animation: show .2s ease forwards;
+}
+@keyframes show {
+    from{
+        visibility: hidden;
+        transform: scale(0);
+    }
+   to{
+        visibility: visible;
+        transform: scale(1);
+    }
 }
 
 .close{
-    transform: scale(0);
+    animation: close .2s ease forwards;
 }
 
+@keyframes close {
+    from{
+        visibility: visible;
+        transform: scale(1);
+    }
+    to{
+        visibility: hidden;
+        transform: scale(0);
+    }
+}
 .modal_close{
     position: absolute;
     height: 2.2cm;
     width: 100%;
 }
 
-.modal_close button{
+.modal_close_btn{
     height: 1.3cm;
     width: 1.3cm;
-    background-color: rgba(10,16,30,.4);
     backdrop-filter: blur(50px);
+    background-image: linear-gradient(rgba(116, 116, 116, 0.8),rgba(78, 78, 78, 0.4));
+}
+
+#projectSections.dark .modal_close_btn{
+   background-image: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.4));
+}
+
+
+.modal_content{
+    margin-top: 3cm;
+}
+
+#projectSections.dark .modal_content{
+    background-color:#3e3e3e;
+ }
+
+ .videoBox{
+    animation:bg_animate .5s infinite ease-in alternate  ;
+ }
+
+
+@keyframes bg_animate{
+    0%{
+       background-color: rgb(210,210,210);
+    }
+    50%{
+        background-color: rgb(200,200,200);
+    }
+    100%{
+        background-color:rgb( 155, 155, 155);;
+    }
 }

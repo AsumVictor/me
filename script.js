@@ -480,38 +480,23 @@ document.addEventListener('DOMContentLoaded', () => {
             
      `         
 
-     x= `
+     modal_content= `
      <div class="modal_close rounded-xl flex justify-center items-end">
-         <button class='modal_close_btn rounded-full text-red-500 font-bold text-5xl ${top3Project.privateClasses.closebtn} 
-         text-center items-center flex justify-center'>&times;</button>
+         <div class='modal_close_btn rounded-full text-red-500 font-bold text-1xl ${top3Project.privateClasses.closebtn} 
+         text-center items-center flex cursor-pointer justify-center'>Close</div>
      </div>
 
-     <!--Project Screenshot-->
-     <div class=''>
-     <div class="projectImagebox md:w-1/2 flex items-center p-4 ">
-        <img src="${top3Project.imageLink}" alt="${top3Project.imageAltText}" srcset="${top3Project.imageLink}">
+    <div class='modal_content w-10/12 bg-gray-200 flex flex-col items-center pt-10 pb-10 rounded-2xl'>
+     <div class='videoBox bg-gray-300 relative w-10/12' style='height:12cm;'>
+          
+     </div>
+    
+     </video>
+    
     </div>
 
-     <div class="projectInfo md:w-1/2 p-4">
-       <h3 class="text-2xl text-center uppercase font-bold">${top3Project.projectTitle}</h3>
-       <div class="flex flex-row flex-start">
-         <p class="px-3 font-bold"><span class=" text-brightRed">${top3Project.client} </span>  **   
-          <span class="capitalize ">${top3Project.type}</span>  **  
-          <span class="text-brightRed">${top3Project.year}</span> </p>
-       </div>
-       <div class="projectdetails">
-         <p class="text-1xl font-bold p-3 text-darkGrayishBlue">${top3Project.projectDescription}</p>
-       </div>
-       <div class="tagsLanguage flex flex-row justify-start flex-wrap px-4 space-x-2 mt-2">
-                    ${projectLangs.join('')}
-       </div>
-       <div class="liveAndCode flex flex-row md:justify-start justify-center md:space-x-5 space-x-2 mt-3 md:p-4">
-         <button class="p-2 see_full_project font-bold text-white bg-brightRed ${top3Project.privateClasses.see_project} rounded-2xl text-center 
-         md:block hover:bg-brightRedLight md:self-start">See Project</button>
 
-     </div>
 
-</div>
      `
 
         projectwrap = document.createElement('div')
@@ -519,9 +504,9 @@ document.addEventListener('DOMContentLoaded', () => {
         projectwrap.innerHTML= homeMyworksContent;
         projectsContainer.appendChild(projectwrap)
         project_modal_box = document.createElement('div')
-        project_modal_box.setAttribute('class',`project_modal_box ${top3Project.privateClasses.modalBox}`)
+        project_modal_box.setAttribute('class',`project_modal_box ${top3Project.privateClasses.modalBox} flex flex-col items-center`)
         project_modal_box.setAttribute('id',`${top3Project.privateClasses.modalBox}`)
-        project_modal_box.innerHTML= x;
+        project_modal_box.innerHTML= modal_content;
         projectsContainer.appendChild(project_modal_box)
        
            });
@@ -543,8 +528,9 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.style.overflowY='scroll'
   }
 })
+  });
 
-})
+
           
   // craete projects on project main screen
   Projects.sort(() => 0.5 - Math.random());
