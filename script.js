@@ -480,28 +480,29 @@ document.addEventListener('DOMContentLoaded', () => {
             
      `         
 
-     x= `
+     modal_content= `
      <div class="modal_close rounded-xl flex justify-center items-end">
          <div class='modal_close_btn rounded-full text-red-500 font-bold text-5xl ${top3Project.privateClasses.closebtn} 
          text-center items-center flex cursor-pointer justify-center'>&times;</div>
      </div>
 
-     <!--Project Screenshot-->
-     <div class=''>
-     <div class="projectImagebox md:w-1/2 flex items-center p-4 ">
-        <img src="${top3Project.imageLink}" alt="${top3Project.imageAltText}" srcset="${top3Project.imageLink}">
+    <div class='modal_content w-1/12 bg-red-400 '>
+    
+    
     </div>
+
+
 
      `
 
         projectwrap = document.createElement('div')
-        projectwrap.setAttribute("class"," relative bg-gray-100 flex flex-col md:flex-row md:p-7 p-4 mt-8 md:space-x-7 rounded-2xl")
+        projectwrap.setAttribute("class"," relative bg-gray-100 flex flex-col justify-center md:flex-row md:p-7 p-4 mt-8 md:space-x-7 rounded-2xl")
         projectwrap.innerHTML= homeMyworksContent;
         projectsContainer.appendChild(projectwrap)
         project_modal_box = document.createElement('div')
-        project_modal_box.setAttribute('class',`project_modal_box ${top3Project.privateClasses.modalBox}`)
+        project_modal_box.setAttribute('class',`project_modal_box ${top3Project.privateClasses.modalBox} show`)
         project_modal_box.setAttribute('id',`${top3Project.privateClasses.modalBox}`)
-        project_modal_box.innerHTML= x;
+        project_modal_box.innerHTML= modal_content;
         projectsContainer.appendChild(project_modal_box)
        
            });

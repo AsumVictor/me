@@ -385,11 +385,13 @@ textarea{
     left: 0px;
     transform: scale(0);
     backdrop-filter: blur(46px);
-    
+    visibility: hidden;
     top: 0px; 
     z-index:100;
     overflow-y: scroll;
    background-image: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.3),rgba(255,255,255,0.5));
+   scrollbar-color: red;
+
 }
 
 #projectSections.dark .project_modal_box{
@@ -398,13 +400,33 @@ textarea{
 }
 
 .show{
-    transform: scale(1);
+    animation: show .2s ease forwards;
+}
+@keyframes show {
+    from{
+        visibility: hidden;
+        transform: scale(0);
+    }
+   to{
+        visibility: visible;
+        transform: scale(1);
+    }
 }
 
 .close{
-    transform: scale(0);
+    animation: close .2s ease forwards;
 }
 
+@keyframes close {
+    from{
+        visibility: visible;
+        transform: scale(1);
+    }
+    to{
+        visibility: hidden;
+        transform: scale(0);
+    }
+}
 .modal_close{
     position: absolute;
     height: 2.2cm;
@@ -414,6 +436,16 @@ textarea{
 .modal_close_btn{
     height: 1.3cm;
     width: 1.3cm;
-    background-color: rgba(0,0,0,.4);
     backdrop-filter: blur(50px);
+    background-image: linear-gradient(rgba(116, 116, 116, 0.8),rgba(78, 78, 78, 0.4));
 }
+
+#projectSections.dark .modal_close_btn{
+   background-image: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.4));
+}
+
+.modal_content{
+    height: 6cm;
+    margin-top: 3cm;
+}
+

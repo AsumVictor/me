@@ -1435,10 +1435,12 @@ textarea{
   transform: scale(0);
   -webkit-backdrop-filter: blur(46px);
           backdrop-filter: blur(46px);
+  visibility: hidden;
   top: 0px;
   z-index:100;
   overflow-y: scroll;
   background-image: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.3),rgba(255,255,255,0.5));
+  scrollbar-color: red;
 }
 
 #projectSections.dark .project_modal_box{
@@ -1446,11 +1448,61 @@ textarea{
 }
 
 .show{
-  transform: scale(1);
+  -webkit-animation: show .2s ease forwards;
+          animation: show .2s ease forwards;
+}
+
+@-webkit-keyframes show {
+  from{
+    visibility: hidden;
+    transform: scale(0);
+  }
+
+  to{
+    visibility: visible;
+    transform: scale(1);
+  }
+}
+
+@keyframes show {
+  from{
+    visibility: hidden;
+    transform: scale(0);
+  }
+
+  to{
+    visibility: visible;
+    transform: scale(1);
+  }
 }
 
 .close{
-  transform: scale(0);
+  -webkit-animation: close .2s ease forwards;
+          animation: close .2s ease forwards;
+}
+
+@-webkit-keyframes close {
+  from{
+    visibility: visible;
+    transform: scale(1);
+  }
+
+  to{
+    visibility: hidden;
+    transform: scale(0);
+  }
+}
+
+@keyframes close {
+  from{
+    visibility: visible;
+    transform: scale(1);
+  }
+
+  to{
+    visibility: hidden;
+    transform: scale(0);
+  }
 }
 
 .modal_close{
@@ -1462,9 +1514,18 @@ textarea{
 .modal_close_btn{
   height: 1.3cm;
   width: 1.3cm;
-  background-color: rgba(0,0,0,.4);
   -webkit-backdrop-filter: blur(50px);
           backdrop-filter: blur(50px);
+  background-image: linear-gradient(rgba(116, 116, 116, 0.8),rgba(78, 78, 78, 0.4));
+}
+
+#projectSections.dark .modal_close_btn{
+  background-image: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.4));
+}
+
+.modal_content{
+  height: 6cm;
+  margin-top: 3cm;
 }
 
 .hover\:bg-brightRedLight:hover {
@@ -1615,3 +1676,4 @@ textarea{
     line-height: 2rem;
   }
 }
+
