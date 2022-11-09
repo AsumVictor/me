@@ -444,8 +444,28 @@ textarea{
    background-image: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.4));
 }
 
+
 .modal_content{
-    height: 6cm;
     margin-top: 3cm;
 }
 
+#projectSections.dark .modal_content{
+    background-color:#3e3e3e;
+ }
+
+ .videoBox{
+    animation:bg_animate .5s infinite ease-in alternate  ;
+ }
+
+
+@keyframes bg_animate{
+    0%{
+       background-color: rgb(210,210,210);
+    }
+    50%{
+        background-color: rgb(200,200,200);
+    }
+    100%{
+        background-color:rgb( 155, 155, 155);;
+    }
+}

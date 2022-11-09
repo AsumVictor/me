@@ -482,12 +482,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
      modal_content= `
      <div class="modal_close rounded-xl flex justify-center items-end">
-         <div class='modal_close_btn rounded-full text-red-500 font-bold text-5xl ${top3Project.privateClasses.closebtn} 
-         text-center items-center flex cursor-pointer justify-center'>&times;</div>
+         <div class='modal_close_btn rounded-full text-red-500 font-bold text-1xl ${top3Project.privateClasses.closebtn} 
+         text-center items-center flex cursor-pointer justify-center'>Close</div>
      </div>
 
-    <div class='modal_content w-1/12 bg-red-400 '>
+    <div class='modal_content w-10/12 bg-gray-200 flex flex-col items-center pt-10 pb-10 rounded-2xl'>
+     <div class='videoBox bg-gray-300 relative w-10/12' style='height:12cm;'>
+          
+     </div>
     
+     </video>
     
     </div>
 
@@ -496,11 +500,11 @@ document.addEventListener('DOMContentLoaded', () => {
      `
 
         projectwrap = document.createElement('div')
-        projectwrap.setAttribute("class"," relative bg-gray-100 flex flex-col justify-center md:flex-row md:p-7 p-4 mt-8 md:space-x-7 rounded-2xl")
+        projectwrap.setAttribute("class"," relative bg-gray-100 flex flex-col md:flex-row md:p-7 p-4 mt-8 md:space-x-7 rounded-2xl")
         projectwrap.innerHTML= homeMyworksContent;
         projectsContainer.appendChild(projectwrap)
         project_modal_box = document.createElement('div')
-        project_modal_box.setAttribute('class',`project_modal_box ${top3Project.privateClasses.modalBox} show`)
+        project_modal_box.setAttribute('class',`project_modal_box ${top3Project.privateClasses.modalBox} flex flex-col items-center`)
         project_modal_box.setAttribute('id',`${top3Project.privateClasses.modalBox}`)
         project_modal_box.innerHTML= modal_content;
         projectsContainer.appendChild(project_modal_box)
@@ -524,8 +528,9 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.style.overflowY='scroll'
   }
 })
+  });
 
-})
+
           
   // craete projects on project main screen
   Projects.sort(() => 0.5 - Math.random());
