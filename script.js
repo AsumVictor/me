@@ -206,6 +206,125 @@ light_themes.forEach((light_theme)=>{
 
 
 //Arrays of Projects
+
+const top3Projects = [
+    
+    {
+        projectTitle:"QR code component",
+        client:"Frontend Mentor",
+        type:"Challenge",
+        year:"June 2022",
+        projectDescription:`This project was challenge from frontend Mentor website. This 
+        is an QR code component card for any website which ivolves purchasing. This 
+        challenge is mostly for newbies; to train your ability to use flex or grid display.
+        You can view my Solution or you can view the source code. Get more from <a class=" text-1xl text-blue-400" href="#">their website</a> 
+        `,
+        tagLanguages:['HTML 5','CSS 3','Boostrap','CSS flex','HTML Sematics'],
+        liveViewLink:"https://asumvictor.github.io/frontendMentor-QR-code-component",
+        sourceCodeLink:"https://github.io/AsumVictor/frontendMentor-QR-code-component",
+        imageLink:"screenshots/qrCode.jpg",
+        video_link:'', 
+        imageAltText:"QR code component image", 
+        reverse:['-reverse',' '],
+        privateClasses: {
+           see_project: 'QR-code-image-btn',
+           modalBox: 'QR-code-modalBox',
+           closebtn: 'QR-code-close-btn',
+        }
+    },
+    {
+        projectTitle:"product card",
+        client:"Frontend Mentor",
+        type:"Challenge",
+        year:"July 2022",
+        projectDescription:`This project was challenge from frontend Mentor website. This 
+        is an product card for any website which ivolves purchasing. This 
+        challenge is mostly for newbies; to train your ability to use flex or grid display.
+        You can view my Solution or you can view the source code. Get more from <a class=" text-1xl text-blue-400" href="#">their website</a> 
+        `,
+        tagLanguages:['HTML 5','CSS 3','Boostrap','CSS flex','HTML Sematics'],
+        liveViewLink:"https://asumvictor.github.io/Frontendmentor-product-card-challenge",
+        sourceCodeLink:"https://github.com/AsumVictor/Frontendmentor-product-card-challenge",
+        imageLink:"screenshots/productCard.jpg",
+        video_link:'', 
+        imageAltText:"product card image",  
+        reverse:['-reverse',' '],
+        privateClasses: {
+         see_project: 'product-card-image-btn',
+         modalBox: 'product-card-modalBox',
+         closebtn: 'product-card-close-btn',
+      }
+    },
+    {
+      projectTitle:"Feed Africa Farm",
+      client:"Company",
+      type:"Web",
+      year:"Nov 2022",
+      projectDescription:`This is an ongoing project for Feed Africa Farm, a local poultry farm established in Techiman Ghana, to expand their business. `,
+      tagLanguages:['Javascript','Tailwind','CSS 3','HTML 5'],
+      liveViewLink:"https://asumvictor.github.io/FeedAff-company/",
+      sourceCodeLink:"https://github.io/AsumVictor/FeedAff-company",
+      imageLink:"screenshots/feedAff.png",
+      video_link:'shortVideos/feedAff.webm', 
+      imageAltText:"Feed Africa Farm", 
+      reverse:['-reverse',' ']
+
+,        privateClasses: {
+        see_project: 'Feed-Africa-btn',
+         modalBox: 'Feed-Africa-modalBox',
+         closebtn: 'Feed-Africa-close-btn',
+      }
+  },
+];
+
+const languages = [
+   {
+     name:'Javascript',
+     logo_src:'Lang_img/javascript.png',
+     logo_alternation_text:'Javascript Logo',
+     progress: 24,
+   },
+   {
+    name:'HTML 5',
+    logo_src:'Lang_img/html.png',
+    logo_alternation_text:'JHTML Logo',
+    progress: 92,
+  },
+  {
+    name:'CSS 3',
+    logo_src:'Lang_img/css.png',
+    logo_alternation_text:'CSS Logo',
+    progress: 87,
+  },
+  {
+    name:'Python',
+    logo_src:'Lang_img/python.png',
+    logo_alternation_text:'CSS Logo',
+    progress: 5,
+  }
+]
+
+const Frameworks = [
+  {
+    name:'Bootstrap',
+    logo_src:'Lang_img/bootstrap.png',
+    logo_alternation_text:'Boostrap Logo',
+    progress: 90,
+  },
+  {
+   name:'Tailwind CSS',
+   logo_src:'Lang_img/tailwindcss.png',
+   logo_alternation_text:'Tailwind Logo',
+   progress: 92,
+ },
+ {
+   name:'React JS',
+   logo_src:'Lang_img/reactjs.png',
+   logo_alternation_text:'React Logo',
+   progress: 2,
+ }
+]
+
 const Projects = [
   {
 
@@ -305,122 +424,6 @@ const Projects = [
   imageLink:"screenshots/Myprofile.png",
   imageAltText:"My profile card image",  
   }
-];
-
-const top3Projects = [
-    {
-
-        projectTitle:"order summary",
-        client:"Frontend Mentor",
-        type:"Challenge",
-        year:"June 2022",
-        projectDescription:`This project was challenge from frontend Mentor website. This 
-        is an order summary card for any website which ivolves purchasing. This 
-        challenge is mostly for newbies; to train your ability to use flex or grid display.
-        You can view my Solution or you can view the source code. Get more from <a class="text-1xl text-blue-600" href="#">their website</a> 
-        `,
-        tagLanguages:['HTML 5','CSS 3','Boostrap','CSS flex','HTML Sematics'],
-        liveViewLink:"https://asumvictor.github.io/order-summary-card",
-        sourceCodeLink:"https://github.io/AsumVictor/order-summary-card",
-        imageLink:"screenshots/orderSummary.jpg",
-        imageAltText:"order summary image", 
-        privateClasses: {
-          see_project: 'order-summary-image-btn',
-          modalBox: 'order-summary-modalBox',
-          closebtn: 'order-summary-close-btn',
-        }
-    },
-    {
-        projectTitle:"QR code component",
-        client:"Frontend Mentor",
-        type:"Challenge",
-        year:"June 2022",
-        projectDescription:`This project was challenge from frontend Mentor website. This 
-        is an QR code component card for any website which ivolves purchasing. This 
-        challenge is mostly for newbies; to train your ability to use flex or grid display.
-        You can view my Solution or you can view the source code. Get more from <a class=" text-1xl text-blue-400" href="#">their website</a> 
-        `,
-        tagLanguages:['HTML 5','CSS 3','Boostrap','CSS flex','HTML Sematics'],
-        liveViewLink:"https://asumvictor.github.io/frontendMentor-QR-code-component",
-        sourceCodeLink:"https://github.io/AsumVictor/frontendMentor-QR-code-component",
-        imageLink:"screenshots/qrCode.jpg",
-        imageAltText:"QR code component image", 
-        privateClasses: {
-           see_project: 'QR-code-image-btn',
-           modalBox: 'QR-code-modalBox',
-           closebtn: 'QR-code-close-btn',
-        }
-    },
-    {
-        projectTitle:"product card",
-        client:"Frontend Mentor",
-        type:"Challenge",
-        year:"July 2022",
-        projectDescription:`This project was challenge from frontend Mentor website. This 
-        is an product card for any website which ivolves purchasing. This 
-        challenge is mostly for newbies; to train your ability to use flex or grid display.
-        You can view my Solution or you can view the source code. Get more from <a class=" text-1xl text-blue-400" href="#">their website</a> 
-        `,
-        tagLanguages:['HTML 5','CSS 3','Boostrap','CSS flex','HTML Sematics'],
-        liveViewLink:"https://asumvictor.github.io/Frontendmentor-product-card-challenge",
-        sourceCodeLink:"https://github.com/AsumVictor/Frontendmentor-product-card-challenge",
-        imageLink:"screenshots/productCard.jpg",
-        imageAltText:"product card image",  
-      privateClasses: {
-         see_project: 'product-card-image-btn',
-         modalBox: 'product-card-modalBox',
-         closebtn: 'product-card-close-btn',
-      }
-    },
-    
-];
-
-const languages = [
-   {
-     name:'Javascript',
-     logo_src:'Lang_img/javascript.png',
-     logo_alternation_text:'Javascript Logo',
-     progress: 24,
-   },
-   {
-    name:'HTML 5',
-    logo_src:'Lang_img/html.png',
-    logo_alternation_text:'JHTML Logo',
-    progress: 92,
-  },
-  {
-    name:'CSS 3',
-    logo_src:'Lang_img/css.png',
-    logo_alternation_text:'CSS Logo',
-    progress: 87,
-  },
-  {
-    name:'Python',
-    logo_src:'Lang_img/python.png',
-    logo_alternation_text:'CSS Logo',
-    progress: 5,
-  }
-]
-
-const Frameworks = [
-  {
-    name:'Bootstrap',
-    logo_src:'Lang_img/bootstrap.png',
-    logo_alternation_text:'Boostrap Logo',
-    progress: 90,
-  },
-  {
-   name:'Tailwind CSS',
-   logo_src:'Lang_img/tailwindcss.png',
-   logo_alternation_text:'Tailwind Logo',
-   progress: 92,
- },
- {
-   name:'React JS',
-   logo_src:'Lang_img/reactjs.png',
-   logo_alternation_text:'React Logo',
-   progress: 2,
- }
 ]
 
 
@@ -436,7 +439,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let project;
     let langs;
     let project_modal_box;
-
+    
     
     //Change to dark theme Automatically
     if (user_hours>=18 || user_hours <=5) {
@@ -445,7 +448,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
     top3Projects.sort(() => 0.5 - Math.random());
     top3Projects.forEach((top3Project) => {
-      
+      let ranDom = (Math.random()*top3Project.reverse.length).toFixed(0)
         // loop through projects languages and display them
         projectLangs = top3Project.tagLanguages.map(
           (top3lang) => `<div class="lang p-2 rounded-xl bg-blue-200 text-darkBlue font-bold m-2"><p>${top3lang}</p></div>
@@ -488,7 +491,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     <div class='modal_content w-10/12 bg-gray-200 flex flex-col items-center pt-10 pb-10 rounded-2xl'>
      <div class='videoBox bg-gray-300 relative w-10/12' style='height:12cm;'>
-          
+     <video width="100%" height="100%" autoplay>
+     <source src="${top3Project.video_link}">
+     <source src="${top3Project.video_link}">
+    
+   </video>
      </div>
     
      </video>
@@ -500,7 +507,7 @@ document.addEventListener('DOMContentLoaded', () => {
      `
 
         projectwrap = document.createElement('div')
-        projectwrap.setAttribute("class"," relative bg-gray-100 flex flex-col md:flex-row md:p-7 p-4 mt-8 md:space-x-7 rounded-2xl")
+        projectwrap.setAttribute("class",`relative bg-gray-100 flex flex-col md:flex-row md:p-7 p-4 mt-8 md:space-x-7 rounded-2xl`)
         projectwrap.innerHTML= homeMyworksContent;
         projectsContainer.appendChild(projectwrap)
         project_modal_box = document.createElement('div')
